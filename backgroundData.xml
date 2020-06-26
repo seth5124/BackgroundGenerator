@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+
+<Background>
+<Races>
+
+	<Dwarf>
+	
+		<Homeland dieType="100">
+	
+			<Result upperBound = "40">
+				<Name>Hills or Mountains</Name>
+				<Text>You gain access to the Goldsniffer race trait and the Highlander regional trait.</Text>
+				<Trait type="race">Goldsniffer</Trait>
+				<Trait type="regional">Highlander</Trait>
+			</Result>
+		
+			<Result upperBound="80">
+				<Name>Underground</Name>
+				<Text>You gain access to the Surface Stranger regional trait and the Tunnel Fighter race trait.</Text>
+				<Trait type="regional">Surface Stranger</Trait>
+				<Trait type="race">Tunnel Fighter</Trait>
+			</Result>
+		
+			<Result upperBound="87">
+				<Name>Non-Dwarven Town or Village</Name>
+				<Text>You gain access to the Brewmaster race trait and the Militia Veteran regional trait.</Text>
+				<Trait type="race">Brewmaster</Trait>
+				<Trait type="regional">Militia Veteran</Trait>
+			</Result>
+		
+			<Result upperBound="95">
+				<Name>Non-Dwarven City or Metropolis</Name>
+				<Text>You gain access to the Brewmaster race trait and the Vagabond Child regional trait.</Text>
+				<Trait type="race">Brewmaster</Trait>
+				<Trait type="regional">Vagabond Child</Trait>
+			</Result>
+		
+			<Result upperBound="100" hasExtraRoll="true">
+				<Name>Unusual Homeland</Name>
+				<Text>	Roll on Table: Unusual Homeland.</Text>
+				<ExtraRoll>
+					<Source>MiscTables</Source>
+					<Table>Unusual_Homeland</Table>
+				</ExtraRoll>
+			</Result>
+		
+		</Homeland>	
+	
+		<Parents dieType= "100">
+	
+			<Result upperBound="60">
+				<Name>Both of your parents are still alive</Name>
+			</Result>
+			
+			<Result upperBound="73">
+				<Name>Only your father is alive.</Name>
+			</Result>
+			
+			<Result upperBound = "86">
+				<Name>Only Your Mother is alive</Name>
+			</Result>
+			
+			<Result upperBound = "100">
+				<Name>Both of your parents are dead</Name>
+				<Text>You gain access to the Orphaned social trait.</Text>
+				<Trait type="social">Orphaned</Trait>
+			</Result>
+			
+	
+		</Parents>
+		
+		<Siblings dieType="100">
+		
+			<Result upperBound="80" siblingRollType = "4" modifier="0"> 
+				<Name>1d4 biological siblings. </Name>
+				<Text>With two or more siblings, you gain access to the Kin Guardian combat trait.</Text>
+			</Result>
+			
+			<Result upperBound="90" siblingRollType="4" modifier="1">
+				<Name>1d4+1 biological siblings.</Name>
+				<Text> With two or more siblings, You gain access to the Kin Guardian combat trait.</Text>
+			</Result>
+			
+			<Result upperBound="95" hasExtraRoll="true">
+				<Name>1d3-1 biological siblings and 1d3-1 adopted siblings. 
+				With two or more siblings, you gain access to the Kin Guardian combat trait. 
+				Roll on Table: Race of Adopted Sibling to determine the race of any adopted siblings.</Name>
+				<Text> You gain access to the Kin Guardian combat trait.</Text>
+				<ExtraRoll rollUpperBound="3">
+					<Table>Adopted_Sibling_Table</Table>
+				</ExtraRoll>
+			</Result>
+			
+			<Result upperBound="100">
+				<Name>No Siblings</Name>
+			</Result>
+					
+		</Siblings>
+	
+	
+	
+
+	</Dwarf>
+
+</Races>
+<MiscTables>
+
+	<Unusual_Homeland dieType="100">
+
+		<Result upperBound="10">
+			<Name>Subterranean</Name>
+			<Text>You gain access to the Surface Stranger regional trait.</Text>
+		</Result >
+
+		<Result upperBound="25">
+			<Name>Mountains</Name>
+			<Text>You gain access to the Highlander regional trait.</Text>
+		</Result>
+		
+		<Result upperBound="40">
+			<Name>Plains</Name>
+			<Text>You gain access to the Savanna Child regional trait.</Text>
+		</Result>
+		
+		<Result upperBound="50">
+			<Name>Town or Village</Name>
+			<Text>You gain access to the Militia Veteran regional trait.</Text>
+		</Result>
+		
+		<Result upperBound="60">
+			<Name>City or Metropolis</Name>
+			<Text> 	You gain access to the Civilized social trait and the Vagabond Child regional trait.</Text>
+		</Result>
+		
+		<Result upperBound="70">
+			<Name>Forest</Name>
+			<Text>You gain access to the Log Roller regional trait.</Text>
+		</Result>
+		
+		<Result upperBound="80">
+			<Name>River, Swamp, or Wetlands</Name>
+			<Text>You gain access to the River Rat regional trait.</Text>
+		</Result>
+		
+		<Result upperBound="85">
+			<Name>Desert</Name>
+			<Text>You gain access to the Desert Child regional trait.</Text>
+		</Result>
+		
+		<Result upperBound="90">
+			<Name>Sea</Name>
+			<Text>You gain access to the Sea-Souled regional trait.</Text>
+		</Result>
+		
+		<Result upperBound="95">
+			<Name>Tundra</Name>
+			<Text>You gain access to the Tundra Child regional trait.</Text>
+		</Result>
+		
+		<Result upperBound="100">
+			<Name>Another Plane</Name>
+			<Text>Your GM chooses the plane. You gain access to the Scholar of the Great Beyond faith trait.</Text>
+		</Result>	
+	</Unusual_Homeland>
+	
+</MiscTables>
+</Background>

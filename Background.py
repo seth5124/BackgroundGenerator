@@ -26,6 +26,7 @@ def table_roll(table):
         multiplier = table.attrib['multiplier']
     roll_value = roll(die_type, modifier, multiplier)
     return_string = str(roll_value) + ": "
+    print(table.attrib['dieType'])
     for result in table.findall('Result'):
 
         roll_upper_bound = result.attrib['upperBound']
@@ -50,8 +51,12 @@ def roll_homeland(race=test_race):
 def roll_parents(race=test_race):
     print(table_roll(races.find('%s/Parents' % race)))
 
+def roll_siblings(race=test_race):
+    print(table_roll(races.find('%s/Siblings' % race)))
+
 
 def roll_background(race=test_race):
+
     roll_homeland(race)
     roll_parents(race)
 

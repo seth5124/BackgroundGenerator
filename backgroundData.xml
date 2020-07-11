@@ -117,7 +117,6 @@
 				</ExtraRoll>
 
 			</Result>
-			
 			<Result upperBound="95" hasExtraRoll="True">
 				<Name>1d3-1 biological siblings and 1d3-1 adopted siblings.</Name>
 				<Text> You gain access to the Kin Guardian combat trait.</Text>
@@ -156,7 +155,6 @@
 				</ExtraRoll>
 
 			</Result>
-			
 			<Result upperBound="100">
 				<Name>No Siblings</Name>
 			</Result>

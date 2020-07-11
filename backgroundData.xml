@@ -39,7 +39,7 @@
 				<Name>Unusual Homeland</Name>
 				<Text>	Roll on Table: Unusual Homeland.</Text>
 				<ExtraRoll>
-					<Table>MiscTables/Unusual_Homeland</Table>
+					<Source>MiscTables/Unusual_Homeland</Source>
 				</ExtraRoll>
 			</Result>
 		
@@ -70,29 +70,90 @@
 		
 		<Siblings dieType="100">
 		
-			<Result upperBound="80"
-					siblingRollType = "4"
-					modifier="0">
+			<Result upperBound="80" hasExtraRoll="True">
 				<Name>1d4 biological siblings. </Name>
 				<Text>With two or more siblings, you gain access to the Kin Guardian combat trait.</Text>
+				<ExtraRoll>
+					<Source>Local</Source>
+					<Table dieType="4">
+						<Result upperBound="1">
+							<Name>1 biological sibling</Name>
+						</Result>
+						<Result upperBound="2">
+							<Name> 2 biological sibling </Name>
+						</Result>
+						<Result upperBound="3">
+							<Name> 3 biological sibling </Name>
+						</Result>
+						<Result upperBound="4">
+							<Name> 4 biological sibling </Name>
+						</Result>
+					</Table>
+				</ExtraRoll>
+			</Result>
+			<Result upperBound="90" hasExtraRoll="True">
+				<Name>1d4+1 biological siblings</Name>
+				<Text>you gain access to the Kin Guardian combat trait.</Text>
+				<ExtraRoll>
+					<Source>Local</Source>
+					<Table dieType="4" modifider='1'>
+						<Result upperBound="1">
+							<Name>1 biological sibling</Name>
+						</Result>
+						<Result upperBound="2">
+							<Name> 2 biological siblings </Name>
+						</Result>
+						<Result upperBound="3">
+							<Name> 3 biological siblings </Name>
+						</Result>
+						<Result upperBound="4">
+							<Name> 4 biological siblings </Name>
+						</Result>
+						<Result upperBound="5">
+							<Name> 5 biological siblings </Name>
+						</Result>
+
+					</Table>
+				</ExtraRoll>
+
 			</Result>
 			
-			<Result
-					upperBound="90"
-					siblingRollType="4"
-					modifier="1">
-				<Name>1d4+1 biological siblings.</Name>
-				<Text> With two or more siblings, You gain access to the Kin Guardian combat trait.</Text>
-			</Result>
-			
-			<Result
-					upperBound="95"
-					siblingRollType="3"
-					modifier="-1">
-				<Name>1d3-1 biological siblings and 1d3-1 adopted siblings. 
-				With two or more siblings, you gain access to the Kin Guardian combat trait. 
-				Roll on Table: Race of Adopted Sibling to determine the race of any adopted siblings.</Name>
+			<Result upperBound="95" hasExtraRoll="True">
+				<Name>1d3-1 biological siblings and 1d3-1 adopted siblings.</Name>
 				<Text> You gain access to the Kin Guardian combat trait.</Text>
+				<ExtraRoll>
+					<Source>Local</Source>
+					<Table dieType="3" modifider="-1">
+						<Result upperBound="1">
+							<Name>1 biological sibling</Name>
+						</Result>
+						<Result upperBound="2">
+							<Name> 2 biological siblings </Name>
+						</Result>
+
+					</Table>
+				</ExtraRoll>
+				<ExtraRoll>
+					<Source>Local</Source>
+					<Table dieType="3" modifider="-1">
+						<Result upperBound="1" hasExtraRoll="True">
+							<Name>1 adopted sibling</Name>
+							<ExtraRoll>
+								<Source>MiscTables/Race_Adopted_Sibling</Source>
+							</ExtraRoll>
+						</Result>
+						<Result upperBound="2" hasExtraRoll="True">
+							<Name> 2 adopted siblings </Name>
+							<ExtraRoll>
+								<Source>MiscTables/Race_Adopted_Sibling</Source>
+							</ExtraRoll>
+							<ExtraRoll>
+								<Source>MiscTables/Race_Adopted_Sibling</Source>
+							</ExtraRoll>
+						</Result>
+
+					</Table>
+				</ExtraRoll>
 
 			</Result>
 			
@@ -167,6 +228,117 @@
 			<Text>Your GM chooses the plane. You gain access to the Scholar of the Great Beyond faith trait.</Text>
 		</Result>	
 	</Unusual_Homeland>
+	<Race_Adopted_Sibling dieType="100">
+		<Result upperBound="1">
+			<Name>Aasimar</Name>
+		</Result>
+		<Result upperBound="2">
+			<Name>Catfolk</Name>
+		</Result>
+		<Result upperBound="4">
+			<Name>Changeling</Name>
+		</Result>
+		<Result upperBound="5">
+			<Name>Dhampir</Name>
+		</Result>
+		<Result upperBound="6">
+			<Name>Duergar</Name>
+		</Result>
+		<Result upperBound="16">
+			<Name>Dwarf</Name>
+		</Result>
+		<Result upperBound="26">
+			<Name>Elf</Name>
+		</Result>
+		<Result upperBound="27">
+			<Name>Fetchling</Name>
+		</Result>
+		<Result upperBound="28">
+			<Name>Gillman</Name>
+		</Result>
+		<Result upperBound="38">
+			<Name>Gnome</Name>
+		</Result>
+		<Result upperBound="39">
+			<Name>Goblin</Name>
+		</Result>
+		<Result upperBound="40">
+			<Name>Grippli</Name>
+		</Result>
+		<Result upperBound="50">
+			<Name>Half-Elf</Name>
+		</Result>
+		<Result upperBound="60">
+			<Name>Half-Orc</Name>
+		</Result>
+		<Result upperBound="70">
+			<Name>Halfling</Name>
+		</Result>
+		<Result upperBound="71">
+			<Name>Hobgoblin</Name>
+		</Result>
+		<Result upperBound="81">
+			<Name>Human</Name>
+		</Result>
+		<Result upperBound="82">
+			<Name>Ifrit</Name>
+		</Result>
+		<Result upperBound="83">
+			<Name>Kitsune</Name>
+		</Result>
+		<Result upperBound="84">
+			<Name>Kobold</Name>
+		</Result>
+		<Result upperBound="85">
+			<Name>Merfolk</Name>
+		</Result>
+		<Result upperBound="86">
+			<Name>Nagaji</Name>
+		</Result>
+		<Result upperBound="87">
+			<Name>Orc</Name>
+		</Result>
+		<Result upperBound="88">
+			<Name>Oread</Name>
+		</Result>
+		<Result upperBound="89">
+			<Name>Ratfolk</Name>
+		</Result>
+		<Result upperBound="90">
+			<Name>Samsaren</Name>
+		</Result>
+		<Result upperBound="91">
+			<Name>Strix</Name>
+		</Result>
+		<Result upperBound="92">
+			<Name>Suli</Name>
+		</Result>
+		<Result upperBound="93">
+			<Name>Svirfneblin</Name>
+		</Result>
+		<Result upperBound="94">
+			<Name>Sylph</Name>
+		</Result>
+		<Result upperBound="95">
+			<Name>Tengu</Name>
+		</Result>
+		<Result upperBound="96">
+			<Name>Tiefling</Name>
+		</Result>
+		<Result upperBound="97">
+			<Name>Undine</Name>
+		</Result>
+		<Result upperBound="98">
+			<Name>Vanara</Name>
+		</Result>
+		<Result upperBound="99">
+			<Name>Vishkanya</Name>
+		</Result>
+		<Result upperBound="100">
+			<Name>Wayang</Name>
+		</Result>
+	</Race_Adopted_Sibling>
+
 	
 </MiscTables>
 </Background>

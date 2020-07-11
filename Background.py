@@ -7,60 +7,51 @@ test_race = "Dwarf"
 tree = ET.parse('backgroundData.xml')
 root = tree.getroot()
 races = root.find('Races')
+misc_tables = root.find('MiscTables')
 
+traits = []
 
 def roll(die_type, modifier=0):
     return random.randint(1, int(die_type)) + modifier
 
 
-def roll_background(race=test_race):
-    print(roll_homeland(race))
-    print(roll_parents(race))
-
-
-def roll_homeland(race=test_race):
-    homeland_table = races.find('%s/Homeland' % race)
-    die_type = homeland_table.attrib['dieType']
+def table_roll(table):
+    die_type = table.attrib['dieType']
     roll_value = roll(die_type)
-    homeland_return_string = "Homeland \n" + "You Rolled: " + str(roll_value) + ", "
+    return_string = ""
 
-    for x in (homeland_table.findall('Result')):
-        if x.find('Name').text == "Unusual Homeland":
-            homeland_return_string += "Unusual Homeland! "
-            homeland_return_string += roll_unusual_homeland(race)
+    for result in table.findall('Result'):
+
+        roll_upper_bound = result.attrib['upperBound']
+        if roll_value <= int(roll_upper_bound):
+            name = str(result.find('Name').text)
+            return_string = str(roll_value) + ": " + name
+
+            if 'hasExtraRoll' in result.attrib:
+                extra_roll = result.find('ExtraRoll')
+                extra_roll_table = root.find(extra_roll.find('Table').text)
+                return_string += "\n \t" + table_roll(extra_roll_table)
             break
-        if roll_value <= int(x.attrib['upperBound']):
-            homeland_return_string += x.find('Name').text
-            break
-    return homeland_return_string
-
-
-def roll_unusual_homeland(race=test_race):
-
-    unusual_homeland_table = root.find("MiscTables/Unusual_Homeland")
-    roll_value = roll(100)
-    return_string = "Rolled: " + str(roll_value) + ", "
-
-    for x in unusual_homeland_table.findall('Result'):
-        if roll_value <= int(x.attrib['upperBound']):
-            return_string += x.find('Name').text
-            break
+        else:
+            name = result.find('Name').text
 
     return return_string
 
 
-def roll_parents(race=test_race):
-    parents_table = races.find('%s/Parents' % race)
-    die_type = parents_table.attrib['dieType']
-    roll_value=roll(die_type)
-    parents_return_string = "Parents \n" + "You Rolled: " + str(roll_value) + ", "
+def roll_homeland(race = test_race):
+    print(table_roll(races.find('%s/Homeland' % race)))
 
-    for result in parents_table.findall('Result'):
-        if roll_value <= int(result.attrib['upperBound']):
-            parents_return_string += result.find('Name').text
-            break
+def roll_parents(race = test_race):
+    print(table_roll(races.find('%s/Parents' % race)))
 
-    return parents_return_string
+
+
+
+def roll_background(race=test_race):
+    roll_homeland()
+    roll_parents()
+
+
 
 
 

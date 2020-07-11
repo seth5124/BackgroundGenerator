@@ -35,16 +35,15 @@
 				<Trait type="regional">Vagabond Child</Trait>
 			</Result>
 		
-			<Result upperBound="100" hasExtraRoll="true">
+			<Result upperBound="100" hasExtraRoll="True">
 				<Name>Unusual Homeland</Name>
 				<Text>	Roll on Table: Unusual Homeland.</Text>
 				<ExtraRoll>
-					<Source>MiscTables</Source>
-					<Table>Unusual_Homeland</Table>
+					<Table>MiscTables/Unusual_Homeland</Table>
 				</ExtraRoll>
 			</Result>
 		
-		</Homeland>	
+		</Homeland>
 	
 		<Parents dieType= "100">
 	
@@ -71,24 +70,30 @@
 		
 		<Siblings dieType="100">
 		
-			<Result upperBound="80" siblingRollType = "4" modifier="0"> 
+			<Result upperBound="80"
+					siblingRollType = "4"
+					modifier="0">
 				<Name>1d4 biological siblings. </Name>
 				<Text>With two or more siblings, you gain access to the Kin Guardian combat trait.</Text>
 			</Result>
 			
-			<Result upperBound="90" siblingRollType="4" modifier="1">
+			<Result
+					upperBound="90"
+					siblingRollType="4"
+					modifier="1">
 				<Name>1d4+1 biological siblings.</Name>
 				<Text> With two or more siblings, You gain access to the Kin Guardian combat trait.</Text>
 			</Result>
 			
-			<Result upperBound="95" hasExtraRoll="true">
+			<Result
+					upperBound="95"
+					siblingRollType="3"
+					modifier="-1">
 				<Name>1d3-1 biological siblings and 1d3-1 adopted siblings. 
 				With two or more siblings, you gain access to the Kin Guardian combat trait. 
 				Roll on Table: Race of Adopted Sibling to determine the race of any adopted siblings.</Name>
 				<Text> You gain access to the Kin Guardian combat trait.</Text>
-				<ExtraRoll rollUpperBound="3">
-					<Table>Adopted_Sibling_Table</Table>
-				</ExtraRoll>
+
 			</Result>
 			
 			<Result upperBound="100">

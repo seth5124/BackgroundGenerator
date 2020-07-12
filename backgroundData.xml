@@ -78,15 +78,19 @@
 					<Table dieType="4">
 						<Result upperBound="1">
 							<Name>1 biological sibling</Name>
+							<Trait type="numSiblings">1</Trait>
 						</Result>
 						<Result upperBound="2">
 							<Name> 2 biological sibling </Name>
+							<Trait type="numSiblings">2</Trait>
 						</Result>
 						<Result upperBound="3">
 							<Name> 3 biological sibling </Name>
+							<Trait type="numSiblings">3</Trait>
 						</Result>
 						<Result upperBound="4">
 							<Name> 4 biological sibling </Name>
+							<Trait type="numSiblings">4</Trait>
 						</Result>
 					</Table>
 				</ExtraRoll>
@@ -99,18 +103,23 @@
 					<Table dieType="4" modifier='1'>
 						<Result upperBound="1">
 							<Name>1 biological sibling</Name>
+							<Trait type="numSiblings">1</Trait>
 						</Result>
 						<Result upperBound="2">
 							<Name> 2 biological siblings </Name>
+							<Trait type="numSiblings">2</Trait>
 						</Result>
 						<Result upperBound="3">
 							<Name> 3 biological siblings </Name>
+							<Trait type="numSiblings">3</Trait>
 						</Result>
 						<Result upperBound="4">
 							<Name> 4 biological siblings </Name>
+							<Trait type="numSiblings">4</Trait>
 						</Result>
 						<Result upperBound="5">
 							<Name> 5 biological siblings </Name>
+							<Trait type="numSiblings">5</Trait>
 						</Result>
 
 					</Table>
@@ -125,9 +134,11 @@
 					<Table dieType="3" modifier="-1">
 						<Result upperBound="1">
 							<Name>1 biological sibling</Name>
+							<Trait type="numSiblings">1</Trait>
 						</Result>
 						<Result upperBound="2">
 							<Name> 2 biological siblings </Name>
+							<Trait type="numSiblings">2</Trait>
 						</Result>
 
 					</Table>
@@ -137,12 +148,14 @@
 					<Table dieType="3" modifier="-1">
 						<Result upperBound="1" hasExtraRoll="True">
 							<Name>1 adopted sibling</Name>
+							<Trait type="numSiblings">1</Trait>
 							<ExtraRoll>
 								<Source>MiscTables/Race_Adopted_Sibling</Source>
 							</ExtraRoll>
 						</Result>
 						<Result upperBound="2" hasExtraRoll="True">
 							<Name> 2 adopted siblings </Name>
+							<Trait type="numSiblings">2</Trait>
 							<ExtraRoll>
 								<Source>MiscTables/Race_Adopted_Sibling</Source>
 							</ExtraRoll>
@@ -160,12 +173,10 @@
 			</Result>
 					
 		</Siblings>
-	
-	
-	
 
 	</Dwarf>
 	<Elf>
+
 		<Homeland dieType="100">
 			<Result upperBound="60">
 				<Name>Forest</Name>
@@ -222,16 +233,89 @@
 				<Name>1d2 biological siblings</Name>
 				<ExtraRoll>
 					<Source>Local</Source>
-					<Table>
+					<Table dieType="2">
 						<Result upperBound="1">
 							<Name>1 Biological sibling</Name>
+							<Trait type="numSiblings" >1</Trait>
 						</Result>
 						<Result upperBound="2">
 							<Name>2 Biological siblings</Name>
+							<Trait type="numSiblings">2</Trait>
 						</Result>
 
 					</Table>
 				</ExtraRoll>
+			</Result>
+			<Result upperBound="85" hasExtraRoll="True">
+				<Name>1d4+1 Biological siblings</Name>
+				<ExtraRoll>
+					<Source>Local</Source>
+					<Table dieType="4" modifier="1">
+						<Result upperBound="1">
+							<Name>1 Biological siblings</Name>
+							<Trait type="numSiblings">1</Trait>
+						</Result>
+						<Result upperBound="2">
+							<Name>2 Biological siblings</Name>
+							<Trait type="numSiblings">2</Trait>
+						</Result>
+						<Result upperBound="3">
+							<Name>3 Biological siblings</Name>
+							<Trait type="numSiblings">3</Trait>
+						</Result>
+						<Result upperBound="4">
+							<Name>4 Biological siblings</Name>
+							<Trait type="numSiblings">4</Trait>
+						</Result>
+						<Result upperBound="5">
+							<Name>5 Biological siblings</Name>
+							<Trait type="numSiblings">5</Trait>
+						</Result>
+					</Table>
+				</ExtraRoll>
+			</Result>
+			<Result upperBound="90" hasExtraRoll="True">
+				<Name> 	1d4+1 biological siblings</Name>
+				<ExtraRoll>
+					<Source>Local</Source>
+					<Table dieType="4" modifier="1">
+						<Result upperBound="2">
+							<Name>2 Siblings</Name>
+						</Result>
+						<Result upperBound="3">
+							<Name>3 Siblings</Name>
+						</Result>
+						<Result upperBound="4">
+							<Name>4 Siblings</Name>
+						</Result>
+						<Result upperBound="5">
+							<Name>5 Siblings</Name>
+						</Result>
+					</Table>
+				</ExtraRoll>
+				<ExtraRoll>
+					<Source>Local</Source>
+					<Table dieType="3" modifier="-1">
+						<Result upperBound="1" hasExtraRoll="True">
+							<Name>1 of these siblings is a half-elf, adopted, or a mix of the two (your choice). \n If adopted, then race is:</Name>
+							<ExtraRoll>
+								<Source>MiscTables/Race_Adopted_Sibling</Source>
+							</ExtraRoll>
+						</Result>
+						<Result upperBound="2" hasExtraRoll="True">
+							<Name>2 of these siblings are half-elves, adopted, or a mix of the two (your choice). \n If adopted, then races are:</Name>
+							<ExtraRoll>
+								<Source>MiscTables/Race_Adopted_Sibling</Source>
+							</ExtraRoll>
+							<ExtraRoll>
+								<Source>MiscTables/Race_Adopted_Sibling</Source>
+							</ExtraRoll>
+						</Result>
+					</Table>
+				</ExtraRoll>
+			</Result>
+			<Result upperBound="100">
+				<Name>No siblings</Name>
 			</Result>
 		</Siblings>
 
@@ -297,6 +381,7 @@
 			<Text>Your GM chooses the plane. You gain access to the Scholar of the Great Beyond faith trait.</Text>
 		</Result>	
 	</Unusual_Homeland>
+
 	<Race_Adopted_Sibling dieType="100">
 		<Result upperBound="1">
 			<Name>Aasimar</Name>

@@ -96,7 +96,7 @@
 				<Text>you gain access to the Kin Guardian combat trait.</Text>
 				<ExtraRoll>
 					<Source>Local</Source>
-					<Table dieType="4" modifider='1'>
+					<Table dieType="4" modifier='1'>
 						<Result upperBound="1">
 							<Name>1 biological sibling</Name>
 						</Result>
@@ -117,12 +117,12 @@
 				</ExtraRoll>
 
 			</Result>
-			<Result upperBound="95" hasExtraRoll="True">
+			<Result upperBound="95" hasExtraRoll="True" name="bio and adopt">
 				<Name>1d3-1 biological siblings and 1d3-1 adopted siblings.</Name>
 				<Text> You gain access to the Kin Guardian combat trait.</Text>
-				<ExtraRoll>
+				<ExtraRoll name="biological table">
 					<Source>Local</Source>
-					<Table dieType="3" modifider="-1">
+					<Table dieType="3" modifier="-1">
 						<Result upperBound="1">
 							<Name>1 biological sibling</Name>
 						</Result>
@@ -132,9 +132,9 @@
 
 					</Table>
 				</ExtraRoll>
-				<ExtraRoll>
+				<ExtraRoll name="adopted table">
 					<Source>Local</Source>
-					<Table dieType="3" modifider="-1">
+					<Table dieType="3" modifier="-1">
 						<Result upperBound="1" hasExtraRoll="True">
 							<Name>1 adopted sibling</Name>
 							<ExtraRoll>
@@ -165,6 +165,77 @@
 	
 
 	</Dwarf>
+	<Elf>
+		<Homeland dieType="100">
+			<Result upperBound="60">
+				<Name>Forest</Name>
+				<Text>You gain access to the Log Roller regional trait.</Text>
+				<Trait type="Regional">Log Roller</Trait>
+			</Result>
+			<Result upperBound="80">
+				<Name>Non-Elven City or Metropolis</Name>
+				<Text>If you’re an elf, you gain access to the Civilized social trait and the Forlorn race trait.
+					If you’re a half-elf, you gain access to the Civilized social trait and the Failed Apprentice race trait.
+				</Text>
+				<Trait type="Social">Civilized</Trait>
+				<Trait type="Race">Forlorn(If you're an elf)</Trait>
+				<Trait type="Race">Failed Apprentice(If you're a half-elf)</Trait>
+
+			</Result>
+			<Result upperBound="95">
+				<Name>Non-Elven Town or Village</Name>
+				<Text>If you’re an elf, you gain access to the Forlorn race trait.
+					If you’re a half-elf, you gain access to the Failed Apprentice race trait.
+				</Text>
+				<Trait type="Race">Forlorn (If you're an elf)</Trait>
+				<Trait type="Race"> Failed Apprentice (If you're a half-elf)</Trait>
+
+			</Result>
+			<Result upperBound="100" hasExtraRoll="True">
+				<Name>Unusual Homeland</Name>
+				<ExtraRoll>
+					<Source>MiscTables/Unusual_Homeland</Source>
+				</ExtraRoll>
+
+			</Result>
+		</Homeland>
+
+		<Parents dieType="100">
+			<Result upperBound="79">
+				<Name>Both of your parents are alive</Name>
+			</Result>
+			<Result upperBound="87">
+				<Name>Only your father is alive</Name>
+			</Result>
+			<Result upperBound="95">
+				<Name>Only your mother is alive</Name>
+			</Result>
+			<Result upperBound="100">
+				<Name>Both of your parents are dead</Name>
+				<Trait type="Social">Orphaned</Trait>
+			</Result>
+
+		</Parents>
+
+		<Siblings dieType="100">
+			<Result upperBound="80" hasExtraRoll="True">
+				<Name>1d2 biological siblings</Name>
+				<ExtraRoll>
+					<Source>Local</Source>
+					<Table>
+						<Result upperBound="1">
+							<Name>1 Biological sibling</Name>
+						</Result>
+						<Result upperBound="2">
+							<Name>2 Biological siblings</Name>
+						</Result>
+
+					</Table>
+				</ExtraRoll>
+			</Result>
+		</Siblings>
+
+	</Elf>
 
 </Races>
 <MiscTables>

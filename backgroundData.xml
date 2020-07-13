@@ -645,6 +645,199 @@
 
 		</Siblings>
 	</Human>
+	<Halfling>
+		<Homeland dieType="100">
+			<Result upperBound="50">
+				<Name>Halfling Settlement</Name>
+				<Trait type="Social">Civilized</Trait>
+				<Trait type="Race">Well-Informed</Trait>
+			</Result>
+			<Result upperBound="80">
+				<Name>Human Settlement</Name>
+				<Trait type="Social">Child of the Streets</Trait>
+				<Trait type="Race">Well-Informed</Trait>
+			</Result>
+			<Result upperBound="95">
+				<Name>Traveling Band or Caravan</Name>
+				<Trait type="Social">Friend in Every Town</Trait>
+			</Result>
+			<Result upperBound="100" hasExtraRoll="True">
+				<Name>Unusual Homeland</Name>
+				<ExtraRoll>
+					<Source>MiscTables/Unusual_Homeland</Source>
+				</ExtraRoll>
+			</Result>
+		</Homeland>
+		<Parents dieType="100">
+			<Result upperBound="70">
+				<Name>Both parents living</Name>
+			</Result>
+			<Result upperBound="80">
+				<Name>Only your father is alive</Name>
+			</Result>
+			<Result upperBound="90">
+				<Name>Only your mother is alive</Name>
+			</Result>
+			<Result upperBound="100">
+				<Name>Both your parents are dead</Name>
+				<Trait type="Social">Orphaned</Trait>
+			</Result>
+		</Parents>
+		<Siblings dieType="100">
+			<Result upperBound="30" hasExtraRoll="True">
+				<Name>1d2 Siblings</Name>
+				<ExtraRoll>
+					<Source>Local</Source>
+					<Table dieType="2">
+						<Result upperBound="1">
+							<Name>1 biological sibling</Name>
+							<Trait type="numSiblings">1</Trait>
+						</Result>
+						<Result upperBound="2">
+							<Name>2 biological siblings</Name>
+							<Trait type="numSiblings">2</Trait>
+						</Result>
+					</Table>
+				</ExtraRoll>
+			</Result>
+			<Result upperBound="90" hasExtraRoll="True">
+				<Name>1d4+1 siblings</Name>
+				<ExtraRoll>
+					<Source>Local</Source>
+					<Table dieType="4" modifier="1">
+						<Result upperBound="2">
+							<Name>2 Biological siblings</Name>
+							<Trait type="numSiblings">2</Trait>
+						</Result>
+						<Result upperBound="3">
+							<Name>3 Biological siblings</Name>
+							<Trait type="numSiblings">3</Trait>
+						</Result>
+						<Result upperBound="4">
+							<Name>4 Biological siblings</Name>
+							<Trait type="numSiblings">4</Trait>
+						</Result>
+						<Result upperBound="5">
+							<Name>5 Biological siblings</Name>
+							<Trait type="numSiblings">5</Trait>
+						</Result>
+					</Table>
+				</ExtraRoll>
+
+			</Result>
+			<Result upperBound="100">
+				<Name>No Siblings</Name>
+			</Result>
+		</Siblings>
+	</Halfling>
+	<Half-Orc>
+		<Homeland dieType="100">
+			<Result upperBound="25">
+				<Name>Subterranean</Name>
+				<Trait type="Conditional">You gain access to either the Scrapper race trait or the Surface Stranger regional trait.</Trait>
+			</Result>
+			<Result upperBound="60">
+				<Name>Orc Settlement</Name>
+				<Trait type="Race">Scrapper</Trait>
+			</Result>
+			<Result upperBound="75" hasExtraRoll="True">
+				<Name>Raised in a human homeland</Name>
+				<ExtraRoll>
+					<Source>Races/Human/Homeland</Source>
+				</ExtraRoll>
+			</Result>
+			<Result upperBound="90">
+				<Name>No True Homeland</Name>
+				<Trait type="Race">Outcast</Trait>
+			</Result>
+			<Result upperBound="100" hasExtraRoll="True">
+				<Name>Unusual Homeland</Name>
+				<ExtraRoll>
+					<Source>MiscTables/Unusual_Homeland</Source>
+				</ExtraRoll>
+			</Result>
+		</Homeland>
+		<Parents dieType="100">
+			<Result upperBound="10">
+				<Name>Both of your parents are alive</Name>
+			</Result>
+			<Result upperBound="35">
+				<Name>Only your father is alive</Name>
+			</Result>
+			<Result upperBound="60">
+				<Name>Only your mother is alive</Name>
+			</Result>
+			<Result upperBound="100">
+				<Name>Both your parents are dead</Name>
+				<Trait type="Social">Orphaned</Trait>
+			</Result>
+		</Parents>
+		<Siblings dieType="100">
+			<Result upperBound="60" hasExtraRoll="True">
+				<Name>1d6+1 Orc siblings</Name>
+				<ExtraRoll>
+					<Source>Local</Source>
+					<Table dieType="6" modifier="1">
+						<Result upperBound="2">
+							<Name>2 Orc siblings</Name>
+							<Trait type="numSiblings">2</Trait>
+						</Result>
+						<Result upperBound="3">
+							<Name>3 Orc siblings</Name>
+							<Trait type="numSiblings">3</Trait>
+						</Result>
+						<Result upperBound="4">
+							<Name>4 Orc siblings</Name>
+							<Trait type="numSiblings">4</Trait>
+						</Result>
+						<Result upperBound="5">
+							<Name>5 Orc siblings</Name>
+							<Trait type="numSiblings">5</Trait>
+						</Result>
+						<Result upperBound="6">
+							<Name>6 Orc siblings</Name>
+							<Trait type="numSiblings">6</Trait>
+						</Result>
+						<Result upperBound="7">
+							<Name>7 Orc siblings</Name>
+							<Trait type="numSiblings">7</Trait>
+						</Result>
+					</Table>
+				</ExtraRoll>
+			</Result>
+			<Result upperBound="70" hasExtraRoll="True">
+				<Name>1d4 human siblings</Name>
+				<ExtraRoll>
+					<Source>Local</Source>
+					<Table dieType="4">
+						<Result upperBound="1">
+							<Name>1 Human sibling</Name>
+							<Trait type="numSiblings">1</Trait>
+						</Result>
+						<Result upperBound="2">
+							<Name>2 Human siblings</Name>
+							<Trait type="numSiblings">2</Trait>
+						</Result>
+						<Result upperBound="3">
+							<Name>3 Human siblings</Name>
+							<Trait type="numSiblings">3</Trait>
+						</Result>
+						<Result upperBound="4">
+							<Name>4 Human siblings</Name>
+							<Trait type="numSiblings">4</Trait>
+						</Result>
+					</Table>
+				</ExtraRoll>
+			</Result>
+			<Result upperBound="80">
+				<Name>1 Half-orc sibling</Name>
+				<Trait type="numSiblings">1</Trait>
+			</Result>
+			<Result upperBound="100">
+				<Name>No siblings</Name>
+			</Result>
+		</Siblings>
+	</Half-Orc>
 
 </Races>
 <MiscTables>
@@ -817,6 +1010,18 @@
 			<Name>Wayang</Name>
 		</Result>
 	</Race_Adopted_Sibling>
+
+	<Relative_Age_Sibling dieType="100">
+		<Result upperBound="48">
+			<Name>Older</Name>
+		</Result>
+		<Result upperBound="96">
+			<Name>Younger</Name>
+		</Result>
+		<Result upperBound="100">
+			<Name>Twins</Name>
+		</Result>
+	</Relative_Age_Sibling>
 
 	
 </MiscTables>

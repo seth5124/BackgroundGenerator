@@ -15,8 +15,8 @@ test_race = "Dwarf"
 
 root = ET.parse('backgroundData.xml').getroot()
 races = root.find('Races')
-list_of_half_races = {"Half-Elf"}
-list_of_races = {"Dwarf", "Elf", "Gnome", "Human"}
+list_of_half_races = {"Half-Elf", "Half-Orc"}
+list_of_races = {"Dwarf", "Elf", "Gnome", "Human", "Halfling"}
 
 traits = dict()
 number_of_siblings = 0
@@ -40,26 +40,22 @@ def table_roll(table):
 
     roll_value = roll(die_type, modifier, multiplier)  # generates die roll
 
-    return_string = str(roll_value) + ": "  # initiates the output string
-    outcome = Result()    # instantiates a result object that will store output string, traits and number of siblings
-    outcome.add_to_return(str(roll_value) + ": ")
+    outcome = Result()
+    outcome.add_to_return(str(roll_value) + ": ") # Beginning of returned string
 
-    for result in table.findall('Result'):  # iterates over results to determine which one you rolled
+    for result in table.findall('Result'):  # iterates over results to determine which one was rolled
 
-        roll_upper_bound = result.attrib['upperBound']  # pulls result upper bound from table
+        roll_upper_bound = result.attrib['upperBound']  # pulls result upper bound from table attribute
         if roll_value <= int(roll_upper_bound):
-            # return_string += str(result.find('Name').text)  # appends the name of the result to the output string
             outcome.add_to_return(str(result.find('Name').text))  # appends to the output string in the result object
+
             if result.findall('Trait') is not None:  # checks if the result gives you access to any traits
                 for trait in result.findall('Trait'):
                     outcome.add_trait(trait.text, trait.attrib["type"])   # adds the trait as a dictionary with the value being the trait type
 
             if 'hasExtraRoll' in result.attrib:  # checks if the result requires any extra rolls
-
                 extra_rolls = result.findall('ExtraRoll')
-
                 for extra_roll in extra_rolls:
-
                     table_source = extra_roll.find('Source').text  # pulls location of the necessary table for the extra roll
 
                     if table_source == "Local":  # local tables are located within the result itself
@@ -102,8 +98,8 @@ def roll_background(race=test_race):
     number_of_siblings = 0
     return "Race: " + race + "\n"\
            + "Homeland: \n" + roll_homeland(race) + \
-           "\n" + "Parents: \n" + roll_parents() + "\n" \
-           + "Siblings: \n" + roll_siblings()
+           "\n" + "Parents: \n" + roll_parents(race) + "\n" \
+           + "Siblings: \n" + roll_siblings(race)
 
 
 class Result:

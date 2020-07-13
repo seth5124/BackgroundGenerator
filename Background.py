@@ -1,15 +1,24 @@
+import os
 import random
 import xml.etree.ElementTree as ET
+import discord
+from dotenv import load_dotenv
+
+load_dotenv()
+TOKEN = "NzMyMDE0OTY3MDI0NTE3MjUx.XwugNQ.lYykRrueiKbNdhg4j5OOnJnL40c"
+GUILD = "Server"
+
+
 
 test_race = "Dwarf"
 
 root = ET.parse('backgroundData.xml').getroot()
 races = root.find('Races')
+list_of_half_races = {"Half-Elf"}
+list_of_races = {"Dwarf", "Elf", "Gnome", "Human"}
 
 traits = dict()
 number_of_siblings = 0
-
-
 
 
 def roll(die_type, modifier=0, multiplier=1):
@@ -72,38 +81,28 @@ def table_roll(table):
 
 
 def roll_homeland(race=test_race):
-    print((table_roll(races.find('%s/Homeland' % race)).get_return_string()))
+    return table_roll(races.find('%s/Homeland' % race)).get_return_string()
 
 
 def roll_parents(race=test_race):
-    print(table_roll(races.find('%s/Parents' % race)).get_return_string())
+    return table_roll(races.find('%s/Parents' % race)).get_return_string()
 
 
 def roll_siblings(race=test_race):
     global number_of_siblings
-    print(table_roll(races.find('%s/Siblings' % race)).get_return_string())
+
     if number_of_siblings >= 2:
         traits['Kin Guardian'] = 'Combat'
-
-
+    return table_roll(races.find('%s/Siblings' % race)).get_return_string()
 
 def roll_background(race=test_race):
     global number_of_siblings
     traits.clear()
     number_of_siblings = 0
-    print("Race:" + race)
-    print("Homeland:")
-    roll_homeland(race)
-    print("Parents:")
-    roll_parents(race)
-    print("Siblings:")
-    roll_siblings(race)
-    print(traits)
-    print(number_of_siblings)
-    print("Yeet")
-
-
-
+    return "Race: " + race + "\n"\
+           + "Homeland: \n" + roll_homeland(race) + \
+           "\n" + "Parents: \n" + roll_parents() + "\n" \
+           + "Siblings: \n" + roll_siblings()
 
 
 class Result:
@@ -125,9 +124,6 @@ class Result:
         else:
             traits[trait] = trait_type
 
-
-
-
     def get_num_siblings(self):
         return self.num_siblings
 
@@ -139,4 +135,29 @@ class Result:
 
 
 
-roll_siblings()
+client = discord.Client()
+
+@client.event
+async def on_ready():
+    print(f'{client.user} has connected')
+    print(client.guilds)
+    print(client.get_all_channels())
+    channel = discord.utils.get(client.get_all_channels(), name="general")
+    await channel.send("Hello world! " + str(client.user) + " is here!")
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+    if '/background' in message.content:
+        for race in list_of_half_races:
+            if race.lower() in message.content.lower():
+                await message.channel.send(roll_background(race))
+                return
+        for race in list_of_races:
+            if race.lower() in message.content.lower():
+                await message.channel.send(roll_background(race))
+                return
+
+
+client.run(TOKEN)
+

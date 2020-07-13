@@ -321,8 +321,330 @@
 
 	</Elf>
 	<Gnome>
+		<Homeland dieType="100">
+			<Result upperBound="30">
+				<Name>Forest</Name>
+				<Trait type="Regional">Log Roller</Trait>
+				<Trait type="Race">Animal Friend</Trait>
+			</Result>
+			<Result upperBound="65">
+				<Name>Non-Gnome Town or Village</Name>
+				<Trait type="Race">Animal Friend</Trait>
+			</Result>
+			<Result upperBound="95">
+				<Name>Non-Gnome City or Metropolis</Name>
+				<Trait type="Race">Rapscallion</Trait>
+			</Result>
+			<Result upperBound="100" hasExtraRoll="True">
+				<Name>Unusual Homeland</Name>
+				<ExtraRoll>
+					<Source>MiscTables/Unusual_Homeland</Source>
+				</ExtraRoll>
+			</Result>
+		</Homeland>
 
+		<Parents dieType="100">
+			<Result upperBound="90">
+				<Name>Both of your parents are alive</Name>
+			</Result>
+			<Result upperBound="93">
+				<Name>Only your father is alive.</Name>
+			</Result>
+			<Result upperBound="96">
+				<Name>Only your mother is alive.</Name>
+			</Result>
+			<Result upperBound="100">
+				<Name>Both of your parents are dead. </Name>
+				<Trait type="Social">Orphaned</Trait>
+			</Result>
+		</Parents>
+
+		<Siblings dieType="100">
+			<Result upperBound="50" hasExtraRoll="True">
+				<Name>1d4 biological siblings</Name>
+				<ExtraRoll>
+					<Source>Local</Source>
+					<Table dieType="4">
+						<Result upperBound="1">
+							<Name>1 Biological Siblings</Name>
+							<Trait type="numSiblings" >1</Trait>
+						</Result>
+						<Result upperBound="2">
+							<Name>2 Biological Siblings</Name>
+							<Trait type="numSiblings" >2</Trait>
+						</Result>
+						<Result upperBound="3">
+							<Name>3 Biological Siblings</Name>
+							<Trait type="numSiblings" >3</Trait>
+						</Result>
+						<Result upperBound="4">
+							<Name>4 Biological Siblings</Name>
+							<Trait type="numSiblings" >4</Trait>
+						</Result>
+					</Table>
+				</ExtraRoll>
+			</Result>
+			<Result upperBound="60" hasExtraRoll="True">
+				<Name>1d4–1 biological siblings and one adopted sibling.</Name>
+				<ExtraRoll>
+					<Source>MiscTables/Race_Adopted_Sibling</Source>
+				</ExtraRoll>
+				<ExtraRoll>
+					<Source>Local</Source>
+					<Table dieType="4" modifier="-1">
+						<Result upperBound="1">
+							<Name>1 Biological sibling</Name>
+							<Trait type="numSiblings" >1</Trait>
+						</Result>
+						<Result upperBound="2">
+							<Name>2 Biological siblings</Name>
+							<Trait type="numSiblings" >2</Trait>
+						</Result>
+						<Result upperBound="3">
+							<Name>3 Biological siblings</Name>
+							<Trait type="numSiblings" >3</Trait>
+						</Result>
+					</Table>
+				</ExtraRoll>
+
+			</Result>
+			<Result upperBound="100">
+				<Name>No siblings</Name>
+			</Result>
+		</Siblings>
 	</Gnome>
+	<Half-Elf>
+		<Homeland dieType="100">
+			<Result upperBound="25" hasExtraRoll="True">
+				<Name>Raised in an Elven Homeland</Name>
+				<ExtraRoll>
+					<Source>Races/Elf/Homeland</Source>
+				</ExtraRoll>
+			</Result>
+			<Result upperBound="75" hasExtraRoll="True">
+				<Name>Raised in a Human Homeland</Name>
+				<ExtraRoll>
+					<Source>Races/Human/Homeland</Source>
+				</ExtraRoll>
+			</Result>
+			<Result upperBound="95">
+				<Name>Forest</Name>
+				<Trait type="Regional">Log Roller</Trait>
+			</Result>
+			<Result upperBound="100" hasExtraRoll="True">
+				<Name>Unusual Homeland</Name>
+				<ExtraRoll>
+					<Source>MiscTables/Unusual_Homeland</Source>
+				</ExtraRoll>
+			</Result>
+		</Homeland>
+		<Parents dieType="100">
+			<Result upperBound="20">
+				<Name>Both of your parents are alive</Name>
+			</Result>
+			<Result upperBound="55">
+				<Name>Only your father is alive</Name>
+			</Result>
+			<Result upperBound="90">
+				<Name>Only your mother is alive</Name>
+			</Result>
+			<Result upperBound="100">
+				<Name>Both of your parents are dead</Name>
+				<Trait type="Social">Orphaned</Trait>
+			</Result>
+
+
+		</Parents>
+		<Siblings dieType="100">
+			<Result upperBound="20" hasExtraRoll="True">
+				<Name>1d2 half-siblings (either elf or human, your choice). </Name>
+				<ExtraRoll>
+					<Source>Local</Source>
+					<Table dieType="2">
+						<Result upperBound="1">
+							<Name>1 Half Sibling</Name>
+							<Trait type="numSiblings" >1</Trait>
+						</Result>
+						<Result upperBound="2">
+							<Name>2 Half Siblings</Name>
+						</Result>
+					</Table>
+				</ExtraRoll>
+			</Result>
+			<Result upperBound="30">
+				<Name>1 Half-elf sibling</Name>
+				<Trait type="Magic"> Kin Bond</Trait>
+			</Result>
+			<Result upperBound="100">
+				<Name>No siblings</Name>
+			</Result>
+		</Siblings>
+	</Half-Elf>
+	<Human>
+		<Homeland dieType="100">
+			<Result upperBound="50">
+				<Name>Town or Village</Name>
+				<Trait type="Regional">Militia Veteran</Trait>
+			</Result>
+			<Result upperBound="85">
+				<Name>City or Metropolis</Name>
+				<Trait type="Social">Civilized (If you're a human or half-elf)</Trait>
+				<Trait type="Regional">Vagabond Child (If you're a half-orc or human)</Trait>
+				<Trait type="Race">Failed Apprentice (If you're a half-elf)</Trait>
+				<Trait type="race">Brute (If you're a half-orc)</Trait>
+			</Result>
+			<Result upperBound="95">
+				<Name>Frontier</Name>
+				<Trait type="Regional">Frontier-Forged</Trait>
+			</Result>
+			<Result upperBound="100" hasExtraRoll="True">
+				<Name>Unusual Homeland</Name>
+				<ExtraRoll>
+					<Source>MiscTables/Unusual_Homeland</Source>
+				</ExtraRoll>
+			</Result>
+		</Homeland>
+		<Parents dieType="100">
+			<Result upperBound="50">
+				<Name>Both of your parents are alive</Name>
+			</Result>
+			<Result upperBound="70">
+				<Name>Only your father is alive</Name>
+			</Result>
+			<Result upperBound="90">
+				<Name>Only your mother is alive</Name>
+			</Result>
+			<Result upperBound="100">
+				<Name>Both of your parents are dead</Name>
+				<Trait type="Social">Orphaned</Trait>
+			</Result>
+		</Parents>
+		<Siblings dieType="100">
+			<Result upperBound="40" hasExtraRoll="True">
+				<Name>1d2 siblings</Name>
+				<ExtraRoll>
+					<Source>Local</Source>
+					<Table dieType="2">
+						<Result upperBound="1">
+							<Name>1 biological sibling</Name>
+							<Trait type="numSiblings" >1</Trait>
+						</Result>
+						<Result upperBound="2">
+							<Name>2 biological siblings</Name>
+							<Trait type="numSiblings" >2</Trait>
+						</Result>
+					</Table>
+				</ExtraRoll>
+			</Result>
+			<Result upperBound="70" hasExtraRoll="True">
+				<Name>1d2 siblings and 1d2 half siblings</Name>
+				<ExtraRoll>
+					<Source>Local</Source>
+					<Table dieType="2">
+						<Result upperBound="1">
+							<Name>1 biological sibling</Name>
+							<Trait type="numSiblings" >1</Trait>
+						</Result>
+						<Result upperBound="2">
+							<Name>2 biological siblings</Name>
+							<Trait type="numSiblings" >2</Trait>
+						</Result>
+					</Table>
+				</ExtraRoll>
+				<ExtraRoll>
+					<Source>Local</Source>
+					<Table dieType="2">
+						<Result upperBound="1" hasExtraRoll="True" numSiblings="1">
+							<Name>1 Half-Sibling</Name>
+							<Trait type="numSiblings" >1</Trait>
+							<ExtraRoll>
+								<Source>Local</Source>
+								<Table dieType="100">
+									<Result upperBound="50">
+										<Name>Race: Half-Elf</Name>
+									</Result>
+									<Result upperBound="100">
+										<Name>Race: Half-Orc</Name>
+									</Result>
+								</Table>
+							</ExtraRoll>
+						</Result>
+						<Result upperBound="2" hasExtraRoll="True">
+							<Name>2 Half-Siblings</Name>
+							<Trait type="numSiblings" >2</Trait>
+							<ExtraRoll>
+								<Source>Local</Source>
+								<Table dieType="100">
+									<Result upperBound="50">
+										<Name>Race: Half-Elf</Name>
+									</Result>
+									<Result upperBound="100">
+										<Name>Race: Half-Orc</Name>
+									</Result>
+								</Table>
+							</ExtraRoll>
+							<ExtraRoll>
+								<Source>Local</Source>
+								<Table dieType="100">
+									<Result upperBound="50">
+										<Name>Race: Half-Elf</Name>
+									</Result>
+									<Result upperBound="100">
+										<Name>Race: Half-Orc</Name>
+									</Result>
+								</Table>
+							</ExtraRoll>
+						</Result>
+					</Table>
+				</ExtraRoll>
+			</Result>
+			<Result upperBound="90" hasExtraRoll="True">
+				<Name>2d4 siblings</Name>
+				<ExtraRoll>
+					<Source>Local</Source>
+					<Table dieType="4" multiplier="2">
+						<Result upperBound="1">
+							<Name>1 Biological sibling</Name>
+							<Trait type="numSiblings" >1</Trait>
+						</Result>
+						<Result upperBound="2">
+							<Name>2 Biological siblings</Name>
+							<Trait type="numSiblings" >2</Trait>
+						</Result>
+						<Result upperBound="3">
+							<Name>3 Biological siblings</Name>
+							<Trait type="numSiblings" >3</Trait>
+						</Result>
+						<Result upperBound="4">
+							<Name>4 Biological siblings</Name>
+							<Trait type="numSiblings" >4</Trait>
+						</Result>
+						<Result upperBound="5">
+							<Name>5 Biological siblings</Name>
+							<Trait type="numSiblings" >5</Trait>
+						</Result>
+						<Result upperBound="6">
+							<Name>6 Biological siblings</Name>
+							<Trait type="numSiblings" >6</Trait>
+						</Result>
+						<Result upperBound="7">
+							<Name>2 Biological siblings</Name>
+							<Trait type="numSiblings" >7</Trait>
+						</Result>
+						<Result upperBound="8">
+							<Name>2 Biological siblings</Name>
+							<Trait type="numSiblings" >8</Trait>
+						</Result>
+					</Table>
+				</ExtraRoll>
+
+			</Result>
+			<Result upperBound="100">
+				<Name>No siblings</Name>
+			</Result>
+
+		</Siblings>
+	</Human>
 
 </Races>
 <MiscTables>

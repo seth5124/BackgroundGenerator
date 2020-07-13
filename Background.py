@@ -5,7 +5,8 @@ import discord
 from dotenv import load_dotenv
 
 load_dotenv()
-TOKEN = "NzMyMDE0OTY3MDI0NTE3MjUx.XwugNQ.lYykRrueiKbNdhg4j5OOnJnL40c"
+token_file = open("token.txt", "r")
+TOKEN = token_file.read()
 GUILD = "Server"
 
 

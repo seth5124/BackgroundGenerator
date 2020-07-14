@@ -41,7 +41,7 @@ def table_roll(table):
     roll_value = roll(die_type, modifier, multiplier)  # generates die roll
 
     outcome = Result()
-    outcome.add_to_return(str(roll_value) + ": ") # Beginning of returned string
+    outcome.add_to_return(str(roll_value) + ": ")  # Beginning of returned string
 
     for result in table.findall('Result'):  # iterates over results to determine which one was rolled
 
@@ -51,28 +51,27 @@ def table_roll(table):
 
             if result.findall('Trait') is not None:  # checks if the result gives you access to any traits
                 for trait in result.findall('Trait'):
-                    outcome.add_trait(trait.text, trait.attrib["type"])   # adds the trait as a dictionary with the value being the trait type
+                    outcome.add_trait(trait.text, trait.attrib["type"])   # adds the trait as a dictionary with the
+                    # value being the trait type
 
             if 'hasExtraRoll' in result.attrib:  # checks if the result requires any extra rolls
                 extra_rolls = result.findall('ExtraRoll')
                 for extra_roll in extra_rolls:
-                    table_source = extra_roll.find('Source').text  # pulls location of the necessary table for the extra roll
+                    table_source = extra_roll.find('Source').text  # pulls location of the necessary table for the
+                    # extra roll
 
                     if table_source == "Local":  # local tables are located within the result itself
 
                         table_source = extra_roll.find('Table')
                     else:
-                        table_source = root.find(table_source)  # if not local, the result will include the full path to the table
+                        table_source = root.find(table_source)  # if not local, the result will include the full path
+                        # to the table
 
                     outcome.extra_roll(table_roll(table_source))
 
-
-
-            number_of_siblings += outcome.get_num_siblings()
+            number_of_siblings += outcome.get_num_siblings()  # Takes any addition to sibling count and adds it to
+            # the overall total
             break
-
-
-
 
     return outcome
 
@@ -87,10 +86,40 @@ def roll_parents(race=test_race):
 
 def roll_siblings(race=test_race):
     global number_of_siblings
+    num_older = 0
+    num_younger = 0
+    is_twin = False
+    is_triplet = False
 
+    data = table_roll(races.find('%s/Siblings' % race))
+    return_string = ""
     if number_of_siblings >= 2:
-        traits['Kin Guardian'] = 'Combat'
-    return table_roll(races.find('%s/Siblings' % race)).get_return_string()
+        traits['Kin Guardian'] = 'Combat'  # adds the Kin Guardian combat trait if you have more than 1 sibling
+    if number_of_siblings != 0:
+        for sibling in range(0, number_of_siblings):
+            result = table_roll(root.find('MiscTables/Relative_Age_Sibling')).get_return_string()
+            if 'Older' in str(result):
+                num_older += 1
+            if 'Younger' in str(result):
+                num_younger += 1
+            if 'Twins' in str(result):
+                if is_twin:
+                    is_triplet = True
+                else:
+                    is_twin = True
+    return_string += data.get_return_string() + "\n"
+    if num_older != 0:
+        return_string += "\n" + str(num_older) + " older than you \n"
+    if num_younger != 0:
+        return_string += str(num_younger) + " younger than you"
+    if is_twin:
+        if is_triplet:
+            return_string += "\n You are part of triplets"
+        else:
+            return_string += "\n You have a twin"
+
+    return return_string
+
 
 def roll_background(race=test_race):
     global number_of_siblings
@@ -136,25 +165,30 @@ client = discord.Client()
 
 @client.event
 async def on_ready():
-    print(f'{client.user} has connected')
+    print(f'{client.user.display_name} has connected')
     print(client.guilds)
-    print(client.get_all_channels())
     channel = discord.utils.get(client.get_all_channels(), name="general")
-    await channel.send("Hello world! " + str(client.user) + " is here!")
+    await channel.send("Hello world! " + client.user.mention + " is here!")
 @client.event
 async def on_message(message):
-    if message.author == client.user:
+    user = message.author
+    if user == client.user:
         return
     if '/background' in message.content:
         for race in list_of_half_races:
             if race.lower() in message.content.lower():
-                await message.channel.send(roll_background(race))
+                await message.channel.send(user.mention +"'s Background\n" + roll_background(race))
                 return
         for race in list_of_races:
             if race.lower() in message.content.lower():
-                await message.channel.send(roll_background(race))
+                user = message.author
+
+                await message.channel.send(user.mention +"'s Background\n" + roll_background(race))
                 return
 
 
-client.run(TOKEN)
+
+def run_bot():
+
+    client.run(TOKEN)
 

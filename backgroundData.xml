@@ -1023,6 +1023,323 @@
 		</Result>
 	</Relative_Age_Sibling>
 
+	<Circumstances_Of_Birth dieType="100">
+		<Result upperBound="40" hasExtraRoll="True">
+			<Name>Lower-Class Birth</Name>
+			<Text>You were born among peasants or slum denizens. You grew up working the land around a village or manor, practicing a rudimentary trade, or begging in a settlement.</Text>
+			<Trait type="Social">Poverty-Stricken</Trait>
+			<ExtraRoll>
+				<Source>MiscTables/d20_Parents_Profession</Source>
+			</ExtraRoll>
+		</Result>
+		<Result upperBound="65">
+			<Name>Middle-Class Birth</Name>
+			<Text>You were born to the middle class, which includes merchants, artisans, and tradespeople.
+				You likely grew up in a good-sized settlement, and one of your parents is likely associated with a guild or other trade organization.
+				As a free person, you don’t experience the bondage of serfdom or peasantry, but you also lack the privilege of the nobility.
+			</Text>
+			<Trait type="Social">Artisan</Trait>
+			<Trait type="Social">Merchant</Trait>
+		</Result>
+		<Result upperBound="70" hasExtraRoll="True">
+			<Name>Noble Birth</Name>
+			<Text>You were born to privilege among the nobility.
+				Unless one of your parents is the regent, your family serves a higher-ranked noble but lesser nobles serve your family in turn. </Text>
+			<Trait type="Social">Influence</Trait>
+			<Trait type="Social">Rich Parents</Trait>
+			<ExtraRoll>
+				<Source>MiscTables/Nobility</Source>
+			</ExtraRoll>
+		</Result>
+		<Result upperBound="72" hasExtraRoll="True">
+			<Name>Adopted outside your race</Name>
+			<Text>You were not raised by your birth family and grew up in a family of a different race than your own. </Text>
+			<ExtraRoll>
+				<Source>MiscTables/Adopted_Outside_Race</Source>
+			</ExtraRoll>
+		</Result>
+		<Result upperBound="77">
+			<Name>Adopted</Name>
+			<Text>You were not raised by your birth family, but taken in by another family within your race or culture.</Text>
+			<Trait type="Special">Adopted</Trait>
+		</Result>
+		<Result upperBound="81">
+			<Name>Bastard Born</Name>
+			<Text>Your parents had a tryst that resulted in your birth out of wedlock. You know one of your parents, but the other remains unknown or
+				a distant presence at best.
+			</Text>
+			<Trait type="Social">Bastard</Trait>
+			<Trait type="Story">Shamed (Feat)</Trait>
+		</Result>
+		<Result upperBound="82">
+			<Name>Blessed Birth</Name>
+			<Text>When you were born, you were blessed by a being of great power such as an angel, azata, or genie.
+				This blessing has protected you from certain peril or marked you as special to some deity. </Text>
+			<Trait type="Faith">Blessed</Trait>
+			<Trait type="Faith">Birthmark</Trait>
+		</Result>
+		<Result upperBound="84">
+			<Name>Born of Violence</Name>
+			<Text>Your birth was caused by violent, unwilling means. You have one parent, and the other likely remains unknown.</Text>
+			<Trait type="Combat">Axe to Grind</Trait>
+			<Trait type="Social">Bastard</Trait>
+		</Result>
+		<Result upperBound="85">
+			<Name>Born out of time</Name>
+			<Text>You were born in a different era, either the distant past or the far future. Some event has displaced you from your time, and the ways and customs of the present seem strange and alien to you. </Text>
+			<Trait type="Faith">Scholar of the Great Beyond</Trait>
+		</Result>
+		<Result upperBound="87">
+			<Name>Born into Bondage</Name>
+			<Text>You were born into slavery or servitude. Your parents are likely slaves or servants, or you were sold into slavery as an infant. </Text>
+			<Trait type="Social">Life of Toil</Trait>
+		</Result>
+		<Result upperBound="88">
+			<Name>Cursed Birth</Name>
+			<Text>When you were born, a powerful fiendish entity tainted your blood in some way and cursed you as an agent of dark prophecy. </Text>
+			<Trait type="Bloodline">Fiend Blood</Trait>
+			<Trait type="Story">Accursed (Feat)</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>Dishonored Family</Name>
+			<Text>
+				You were born into a family that once was honored among your
+				society but has since fallen into disgrace. Now your family name is
+				loathed and maligned by those who know it, putting you on your guard.
+			</Text>
+			<Trait type="Combat">Reactionary</Trait>
+			<Trait type="Story">Legacy (Feat)</Trait>
+			<Trait type="Story">Redemption (Feat)</Trait>
+		</Result>
+		<Result upperBound="92">
+			<Name>Heir to a legacy</Name>
+			<Text>
+				You are the heir to a family with an old name and a distinguished past.
+				Your family might be wealthy or middle class,
+				but your name itself is worth twice your fortunes.
+			</Text>
+			<Trait type="Social">Influence</Trait>
+			<Trait type="Social">Rich Parents</Trait>
+		</Result>
+		<Result upperBound="94">
+			<Name>Left to die</Name>
+			<Text>When you were born you were left to die, but by some twist of circumstance you survived.</Text>
+			<Trait type="Combat">Courageous</Trait>
+			<Trait type="Social">Savage</Trait>
+			<Trait type="Story">Arisen</Trait>
+		</Result>
+		<Result upperBound="95">
+			<Name>Marked by the gods</Name>
+			<Text>A deity has marked you. That mark can be on your body or your soul. </Text>
+			<Trait type="Faith">Birthmark</Trait>
+			<Trait type="Faith">Sacred Touch</Trait>
+			<Trait type="Story">Prophet</Trait>
+		</Result>
+		<Result upperBound="96">
+			<Name>Energy Infused</Name>
+			<Text>During your birth you were exposed to potent source of divine energy.</Text>
+			<Trait type="Faith">Sacred Conduit</Trait>
+			<Trait type="faith">Sacred Touch</Trait>
+		</Result>
+		<Result upperBound="97">
+			<Name>Progeny of Power</Name>
+			<Text>You were born during a particularly powerful conjunction or in some other time of power.</Text>
+			<Trait type="Magic">Magical Talent</Trait>
+			<Trait type="Social">Charming</Trait>
+			<Trait type="Faith">Sacred Touch</Trait>
+		</Result>
+		<Result upperBound="98">
+			<Name>Prophesied</Name>
+			<Text>Your birth was foretold, as recently as during the last generation to as far back as thousands of years ago.</Text>
+			<Trait type="Faith">Prophesied</Trait>
+		</Result>
+		<Result upperBound="99">
+			<Name>Reincarnated</Name>
+			<Text>You have been reborn in many cycles, and may be reborn in many more until you accomplish the ultimate task for which you are destined.</Text>
+			<Trait type="Faith">Reincarnated</Trait>
+			<Trait type="Story">Arisen</Trait>
+			<Trait type="Story">Forgotten Past</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>The Omen</Name>
+			<Text>
+				The sages, priests, or wizards of your society decreed your birth an
+				omen of a coming age or event—perhaps you are an omen of promise, perhaps one of dark times ahead.
+			</Text>
+			<Trait type="Faith">Omen</Trait>
+		</Result>
+
+	</Circumstances_Of_Birth>
+
+	<Parents_Profession dieType="100">
+		<Result upperBound="5">
+			<Name>Slaves</Name>
+			<Trait type="Social">Life of Toil</Trait>
+		</Result>
+		<Result upperBound="25">
+			<Name>Serfs/Peasants</Name>
+			<Trait type="Social">Poverty-Stricken</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Entertainers</Name>
+			<Trait type="Social">Talented</Trait>
+		</Result>
+		<Result upperBound="34">
+			<Name>Soldiers</Name>
+			<Trait type="Combat">Tactician</Trait>
+		</Result>
+		<Result upperBound="37">
+			<Name>Sailors</Name>
+			<Trait type="Social">Worldly</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>Thieves</Name>
+			<Trait type="Social">Child of the streets</Trait>
+		</Result>
+		<Result upperBound="55">
+			<Name>Yeomen</Name>
+			<Trait type="Regional">Savanna Child</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Tradespeople</Name>
+			<Trait type="Social">Artisan</Trait>
+			<Trait type="Social">Life of Toil</Trait>
+		</Result>
+		<Result upperBound="85">
+			<Name>Artisans</Name>
+			<Trait type="Social">Artisan</Trait>
+		</Result>
+		<Result upperBound="95">
+			<Name>Merchants</Name>
+			<Trait type="Social">Merchant</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Clergy or Cultists</Name>
+			<Trait type="Faith">Child of the temple</Trait>
+		</Result>
+
+
+	</Parents_Profession>
+	<d20_Parents_Profession dieType="100" multiplier="2">
+		<Result upperBound="5">
+			<Name>Slaves</Name>
+			<Trait type="Social">Life of Toil</Trait>
+		</Result>
+		<Result upperBound="25">
+			<Name>Serfs/Peasants</Name>
+			<Trait type="Social">Poverty-Stricken</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Entertainers</Name>
+			<Trait type="Social">Talented</Trait>
+		</Result>
+		<Result upperBound="34">
+			<Name>Soldiers</Name>
+			<Trait type="Combat">Tactician</Trait>
+		</Result>
+		<Result upperBound="37">
+			<Name>Sailors</Name>
+			<Trait type="Social">Worldly</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>Thieves</Name>
+			<Trait type="Social">Child of the streets</Trait>
+		</Result>
+		<Result upperBound="55">
+			<Name>Yeomen</Name>
+			<Trait type="Regional">Savanna Child</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Tradespeople</Name>
+			<Trait type="Social">Artisan</Trait>
+			<Trait type="Social">Life of Toil</Trait>
+		</Result>
+		<Result upperBound="85">
+			<Name>Artisans</Name>
+			<Trait type="Social">Artisan</Trait>
+		</Result>
+		<Result upperBound="95">
+			<Name>Merchants</Name>
+			<Trait type="Social">Merchant</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Clergy or Cultists</Name>
+			<Trait type="Faith">Child of the temple</Trait>
+		</Result>
+
+
+	</d20_Parents_Profession>
+	<Adopted_Outside_Race dieType="100">
+		<Result upperBound="5">
+			<Name>Adopted by Dragons</Name>
+			<Text>For its own purposes, a dragon raised you as its own. You have learned the language and history, wisdom, power, and might of dragonkind.</Text>
+			<Trait type="Race">Blood of dragons</Trait>
+			<Trait type="Magic">Magical Knack</Trait>
+		</Result>
+		<Result upperBound="10">
+			<Name>Adopted by the Fey</Name>
+			<Text>Your adoptive parents were fey creatures such as korreds, pixies, or a dryad.</Text>
+			<Trait type="Social">Charming</Trait>
+			<Trait type="Magic">Magical Knack</Trait>
+		</Result>
+		<Result upperBound="13">
+			<Name>Raised among the dead</Name>
+			<Text>
+				Your adoptive parent is a nonliving creature, such as a spectre, ghost, lich, or vampire. You were likely raised in empty ruined halls, among tombs and crypts,
+				by a creature that feeds on life. What its purpose was for raising you, none can say.
+			</Text>
+			<Trait type="Race">Deathtouched</Trait>
+			<Trait type="Magic">Magical Knack</Trait>
+			<Trait type="Story">Glimpse Beyond</Trait>
+		</Result>
+		<Result upperBound="19">
+			<Name>Raised by Angels</Name>
+			<Text>
+				Angels attended your birth and took you to live with them in the heavens.
+				These cosmic beings expanded your view to encompass not just the world but the larger universe.
+				You know that wherever you go, your angelic parents watch over you.
+			</Text>
+			<Trait type="Faith">Blessed</Trait>
+		</Result>
+		<Result upperBound="25">
+			<Name>Raised by Beasts</Name>
+			<Text>
+				When you were separated from your biological parents, you were found and raised by wild beasts.
+				Your ways are the ways of the wild, and along with your advanced survival instincts
+				you’ve adopted the natural habits of a specific beast.
+			</Text>
+			<Trait type="Combat">Resilient</Trait>
+			<Trait type="Story">Feral Heart</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Raised by Civilized Humanoids (Race chosen by GM)</Name>
+			<Text>You were raised by a community of civilized humanoids of a race different from your own (chosen by your GM).
+				Your attitudes, beliefs, and values reflect that race, although characteristics of your true nature frequently emerge.
+			</Text>
+			<Trait type="Race">A Trait from the race that raised you</Trait>
+		</Result>
+		<Result upperBound="95">
+			<Name>Raised by Savage Humanoids</Name>
+			<Text>
+				You were raised by savage humanoids such as orcs, kobolds, gnolls, troglodytes,
+				or lizardfolk. As a result, your values, customs,
+				and traditions are those of your adoptive parents, though
+				characteristics of your true nature frequently emerge.
+			</Text>
+			<Trait type="Social">Savage</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Fiend Raised</Name>
+			<Text>You were separated from your natural parents and raised by a
+				fiend who taught you the cruelty and malice of the gods and worked
+				to fashion you into its own mortal instrument to corrupt innocent souls.
+			</Text>
+			<Trait type="Race">Fiend Blood</Trait>
+			<Trait type="Story">Damned</Trait>
+		</Result>
+	</Adopted_Outside_Race>
+
+
 	
 </MiscTables>
 </Background>

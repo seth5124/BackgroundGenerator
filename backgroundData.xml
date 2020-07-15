@@ -1024,13 +1024,11 @@
 	</Relative_Age_Sibling>
 
 	<Circumstances_Of_Birth dieType="100">
-		<Result upperBound="40" hasExtraRoll="True">
+		<Result upperBound="40">
 			<Name>Lower-Class Birth</Name>
 			<Text>You were born among peasants or slum denizens. You grew up working the land around a village or manor, practicing a rudimentary trade, or begging in a settlement.</Text>
 			<Trait type="Social">Poverty-Stricken</Trait>
-			<ExtraRoll>
-				<Source>MiscTables/d20_Parents_Profession</Source>
-			</ExtraRoll>
+			<Trait type="Special">Lower-Class</Trait>
 		</Result>
 		<Result upperBound="65">
 			<Name>Middle-Class Birth</Name>
@@ -1220,6 +1218,7 @@
 
 
 	</Parents_Profession>
+
 	<d20_Parents_Profession dieType="20" multiplier="2">
 		<Result upperBound="5">
 			<Name>Slaves</Name>
@@ -1269,6 +1268,7 @@
 
 
 	</d20_Parents_Profession>
+
 	<Adopted_Outside_Race dieType="100">
 		<Result upperBound="5">
 			<Name>Adopted by Dragons</Name>
@@ -1284,114 +1284,250 @@
 		</Result>
 		<Result upperBound="13">
 			<Name>Raised among the dead</Name>
-			<Text>
-				Your adoptive parent is a nonliving creature, such as a spectre, ghost, lich, or vampire. You were likely raised in empty ruined halls, among tombs and crypts,
-				by a creature that feeds on life. What its purpose was for raising you, none can say.
-			</Text>
+			<Text>Your adoptive parent is a nonliving creature, such as a spectre, ghost, lich, or vampire. You were likely raised in empty ruined halls, among tombs and crypts, by a creature that feeds on life. What its purpose was for raising you, none can say.</Text>
 			<Trait type="Race">Deathtouched</Trait>
 			<Trait type="Magic">Magical Knack</Trait>
 			<Trait type="Story">Glimpse Beyond</Trait>
 		</Result>
 		<Result upperBound="19">
 			<Name>Raised by Angels</Name>
-			<Text>
-				Angels attended your birth and took you to live with them in the heavens.
-				These cosmic beings expanded your view to encompass not just the world but the larger universe.
-				You know that wherever you go, your angelic parents watch over you.
-			</Text>
+			<Text>Angels attended your birth and took you to live with them in the heavens. These cosmic beings expanded your view to encompass not just the world but the larger universe. You know that wherever you go, your angelic parents watch over you.</Text>
 			<Trait type="Faith">Blessed</Trait>
 		</Result>
 		<Result upperBound="25">
 			<Name>Raised by Beasts</Name>
-			<Text>
-				When you were separated from your biological parents, you were found and raised by wild beasts.
-				Your ways are the ways of the wild, and along with your advanced survival instincts
-				you’ve adopted the natural habits of a specific beast.
-			</Text>
+			<Text>When you were separated from your biological parents, you were found and raised by wild beasts. Your ways are the ways of the wild, and along with your advanced survival instincts you’ve adopted the natural habits of a specific beast.</Text>
 			<Trait type="Combat">Resilient</Trait>
 			<Trait type="Story">Feral Heart</Trait>
 		</Result>
 		<Result upperBound="70">
 			<Name>Raised by Civilized Humanoids (Race chosen by GM)</Name>
-			<Text>You were raised by a community of civilized humanoids of a race different from your own (chosen by your GM).
-				Your attitudes, beliefs, and values reflect that race, although characteristics of your true nature frequently emerge.
-			</Text>
+			<Text>You were raised by a community of civilized humanoids of a race different from your own (chosen by your GM). Your attitudes, beliefs, and values reflect that race, although characteristics of your true nature frequently emerge.</Text>
 			<Trait type="Race">A Trait from the race that raised you</Trait>
 		</Result>
 		<Result upperBound="95">
 			<Name>Raised by Savage Humanoids</Name>
-			<Text>
-				You were raised by savage humanoids such as orcs, kobolds, gnolls, troglodytes,
-				or lizardfolk. As a result, your values, customs,
-				and traditions are those of your adoptive parents, though
-				characteristics of your true nature frequently emerge.
-			</Text>
+			<Text>You were raised by savage humanoids such as orcs, kobolds, gnolls, troglodytes, or lizardfolk. As a result, your values, customs, and traditions are those of your adoptive parents, though characteristics of your true nature frequently emerge.</Text>
 			<Trait type="Social">Savage</Trait>
 		</Result>
 		<Result upperBound="100">
 			<Name>Fiend Raised</Name>
-			<Text>You were separated from your natural parents and raised by a
-				fiend who taught you the cruelty and malice of the gods and worked
-				to fashion you into its own mortal instrument to corrupt innocent souls.
-			</Text>
+			<Text>You were separated from your natural parents and raised by a fiend who taught you the cruelty and malice of the gods and worked to fashion you into its own mortal instrument to corrupt innocent souls.</Text>
 			<Trait type="Race">Fiend Blood</Trait>
 			<Trait type="Story">Damned</Trait>
 		</Result>
 	</Adopted_Outside_Race>
+
 	<Nobility dieType="100">
 		<Result upperBound="60">
 			<Name>Gentry</Name>
-			<Text>You are the child of a minor lord, lady, or noble with an income, hereditary land such as a manor, and titles.
-				You likely grew up in a manor and your parents were paid tribute by peasants.
-				Your parents serve a higher baron, count, or duke.
-			</Text>
+			<Text>You are the child of a minor lord, lady, or noble with an income, hereditary land such as a manor, and titles. You likely grew up in a manor and your parents were paid tribute by peasants. Your parents serve a higher baron, count, or duke.</Text>
 		</Result>
 		<Result upperBound="78">
 			<Name>Knight</Name>
-			<Text>You are the child of a knight, a noble with estates, titles, and lands who serves a lord.
-				Your family has sworn an oath of fealty to a liege—such as a baron, count, or duke—and commits to military service in his or her name.
-				As the child of a knight, you may serve as a squire to another knight while pursuing your own path to knighthood.
-			</Text>
+			<Text>You are the child of a knight, a noble with estates, titles, and lands who serves a lord. Your family has sworn an oath of fealty to a liege—such as a baron, count, or duke—and commits to military service in his or her name. As the child of a knight, you may serve as a squire to another knight while pursuing your own path to knighthood.</Text>
 		</Result>
 		<Result upperBound="85">
 			<Name>Baron</Name>
-			<Text>You are the child of a baron or baroness, a noble responsible for a
-				land encompassing several smaller manors that pay tribute.
-				Your parents receive orders directly from the monarch,
-				and you’re expected to attend the royal court. You are entitled to hereditary
-				estates, titles, and land.
-			</Text>
+			<Text>You are the child of a baron or baroness, a noble responsible for a land encompassing several smaller manors that pay tribute. Your parents receive orders directly from the monarch, and you’re expected to attend the royal court. You are entitled to hereditary estates, titles, and land.</Text>
 		</Result>
 		<Result upperBound="91">
 			<Name>Count</Name>
-			<Text>You are the noble child of a count or countess.
-				Your family members receive hereditary titles, land, and estates,
-				and are among the most wealthy nobles in your domain.
-				Knights and minor lords pay tribute to your family, and your
-				parents attend directly to the monarch. You’re expected to attend the royal court.
-			</Text>
+			<Text>You are the noble child of a count or countess. Your family members receive hereditary titles, land, and estates, and are among the most wealthy nobles in your domain. Knights and minor lords pay tribute to your family, and your parents attend directly to the monarch. You’re expected to attend the royal court.</Text>
 		</Result>
 		<Result upperBound="96">
 			<Name>Duke</Name>
-			<Text>You are the child of a duke or duchess, the most powerful noble in the realm apart from the royal family.
-				Your parents attend directly to the monarch and have the highest place at court.
-				Your lands, titles, and estates are significant, and many lords and knights serve under your parents’ command.
-			</Text>
+			<Text>You are the child of a duke or duchess, the most powerful noble in the realm apart from the royal family. Your parents attend directly to the monarch and have the highest place at court. Your lands, titles, and estates are significant, and many lords and knights serve under your parents’ command.</Text>
 		</Result>
 		<Result upperBound="99">
 			<Name>Minor Prince</Name>
-			<Text>You are the child of a prince or princess, and part of the royal family. You aren’t the next in succession,
-				but your power and wealth are grand indeed.
-			</Text>
+			<Text>You are the child of a prince or princess, and part of the royal family. You aren’t the next in succession, but your power and wealth are grand indeed.</Text>
 		</Result>
 		<Result upperBound="100">
 			<Name>Regent</Name>
-			<Text>	You are a prince or princess, the son or daughter of the monarch. You owe fealty directly to your parents, and to no one else.
-				Few command the power and wealth you do, and your presence inspires great respect, if not total awe, among those who kneel before the crown.
-			</Text>
+			<Text>	You are a prince or princess, the son or daughter of the monarch. You owe fealty directly to your parents, and to no one else. Few command the power and wealth you do, and your presence inspires great respect, if not total awe, among those who kneel before the crown.</Text>
 		</Result>
 
 	</Nobility>
+
+	<Major_Childhood_Event dieType="100">
+		<Result upperBound="5">
+			<Name>Academy Training</Name>
+			<Text>You attended a private academy where you studied a number of skills and gained training in your current profession. Whether you were a brilliant student or a dropout, the university environment was your home for a good portion of your formative years.</Text>
+			<Trait type="Magic">Focused Mind</Trait>
+		</Result>
+		<Result upperBound="10">
+			<Name>Betrayal</Name>
+			<Text> 	a friend or family member whom you trusted more than anyone else betrayed you. You have never fully trusted anyone since and prefer to rely on your own abilities rather than place your trust in others.</Text>
+			<Trait type="Social">Suspicious</Trait>
+		</Result>
+		<Result upperBound="15">
+			<Name>Bullied</Name>
+			<Text>In your early life, you were a victim—easy prey for those stronger or cleverer than yourself. They beat you when they could, using you for their sport. This abuse nursed a powerful flame of vengeance.</Text>
+			<Trait type="Combat">Bullied</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name>Competition Champion</Name>
+			<Text>You distinguished yourself at an early age when you won a competition. This might have been a martial contest of arms, a showing of apprentice magicians, high stakes gambling, or something mundane like an eating championship.</Text>
+			<Trait type="Social">Influence</Trait>
+			<Trait type="Story Feat">Champion</Trait>
+		</Result>
+		<Result upperBound="25">
+			<Name>Death in the Family</Name>
+			<Text>You were profoundly affected by the death of the relative closest to you—a parent, grandparent, favorite sibling, aunt, uncle, or cousin. This death affected you profoundly, and you’ve never been able to let go of it.</Text>
+			<Trait type="Combat">Reactionary</Trait>
+			<Trait type="Story Feat">Deny the Reaper</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Died</Name>
+			<Text>You died, or came so close to death that you walked the boundary between the realms of the living and the dead. Having passed from life’s domain once, you have a unique perspective on life, perhaps even a greater appreciation for it—or maybe your experience caused you to reject all trivial things, focusing only on matters of true import</Text>
+			<Trait type="Faith">Fearless Defiance</Trait>
+			<Trait type="Story Feat">Arisen</Trait>
+		</Result>
+		<Result upperBound="35">
+			<Name>Fall of a Major Power</Name>
+			<Text>In your early years, an old power with far-reaching influence fell into decline. This could have been an empire, a major organization or gang, or a person such as a benevolent king or evil dictator. Your early memories were founded in a world where this great power affected your region for good or ill.</Text>
+			<Trait type="Social">Worldly</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>Fell in with a Bad Crowd</Name>
+			<Text>In your youth, you ran with a brutal, evil, or sadistic crowd. You might have belonged to a gang, a thieves’ guild, or some other nefarious organization. It was easy to cave in to pressure and do whatever they told you to do, and your outlook is colored by moral ambiguity.</Text>
+			<Trait type="Social">Child of the Streets</Trait>
+		</Result>
+		<Result upperBound="45">
+			<Name>First Kill</Name>
+			<Text> 	You’ve had blood on your hands since your youth, when you first took the life of another creature. Whether this act repulsed you or gave you pleasure, it was a formative experience.</Text>
+			<Trait type="Combat">Killer</Trait>
+			<Trait type="Story Feat">Innocent Blood</Trait>
+		</Result>
+		<Result upperBound="50">
+			<Name>Troubled First Love</Name>
+			<Text>Your first love was everything you imagined it would be. That is, until you were separated from your beloved. This may have been the result of distance, changing perspectives, death, or differences in class or family. Some have said this made you jaded—you think it has granted you insight on how the world really works.</Text>
+			<Trait type="Social">Worldly</Trait>
+		</Result>
+		<Result upperBound="55">
+			<Name>Imprisoned</Name>
+			<Text> 	Your criminal record began when you were young. You were imprisoned, punished, and possibly displayed in public as a criminal. Whether or not you committed the crime, the experience has stayed with you. You gain access to the Criminal social trait.</Text>
+			<Trait type="Social">Criminal</Trait>
+			<Trait type="Story Feat">Liberator</Trait>
+		</Result>
+		<Result upperBound="60">
+			<Name>Inheritance</Name>
+			<Text> 	A great sum of wealth or property was bequeathed to you at an early age, providing you with extraordinary means. Daily costs of living have ceased to concern you, and you’ve learned that there is little that money cannot buy.</Text>
+			<Trait type="Social">Rich Parents</Trait>
+		</Result>
+		<Result upperBound="65">
+			<Name>Kidnapped</Name>
+			<Text>You were kidnapped at some point in your childhood. The kidnappers might have been pirates, slavers, thieves looking for ransom, a powerful guild seeking to blackmail your parents, a cult, and so on else.Before you were released, were ransomed, or escaped, you picked up on various aspects of the criminal underworld.</Text>
+			<Trait type="Social">Canter</Trait>
+			<Trait type="Story Feat">Liberator</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Magical Gift</Name>
+			<Text>When you were a child, you found, stole, or were given a magic item that gave you an extraordinary ability. You may have used this item for mischief, crime, or good. Since that time, magic items have always held a special fascination for you.</Text>
+			<Trait type="Magic">Magical Talent</Trait>
+		</Result>
+		<Result upperBound="75">
+			<Name>Major Disaster</Name>
+			<Text> 	You witnessed—and survived—a major disaster in your childhood years, such as a great fire, flood, earthquake, volcano, or storm. It obliterated the settlement where you lived, whether a small village, large city, or entire island.</Text>
+			<Trait type="Combat">Resilient</Trait>
+			<Trait type="Story Feat">Unforgotten</Trait>
+		</Result>
+		<Result upperBound="80">
+			<Name>Mentorship/Patronage</Name>
+			<Text>a mentor or patron took an interest in your development and volunteered to train or sponsor you. This creature’s motives might not be entirely clear, but without its influence you would not be who you are.</Text>
+			<Trait type="Social">Mentored</Trait>
+		</Result>
+		<Result upperBound="85">
+			<Name>Met a Fantastic Creature</Name>
+			<Text>When you were only a child, you made contact with a magical creature, such as a dragon, unicorn, genie, pixie, or similar creature. You learned a powerful lesson or a magic trick from that creature. This meeting changed your life and made you different from the other children.</Text>
+			<Trait type="Magic">Gifted Adept</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>Ordinary Childhood</Name>
+			<Text>Your childhood was fairly ordinary, with no major blessing or catastrophe—a stark contrast to an adventuring life. You lived your life in anticipation of growing up so you could affect the dull backdrop upon which your mundane life was painted. Now that you’ve grown, it’s easy to miss those tranquil days where nothing ever seemed to happen.</Text>
+			<Trait type="Social">Ordinary</Trait>
+		</Result>
+		<Result upperBound="95">
+			<Name>Raiders</Name>
+			<Text>a horde of raiders attacked your settlement and killed several of your people. This could have been a tribe of brutal humanoids or the conquering army of a civilized nation. As a result, you harbor deep resentment toward a particular faction, race, or country</Text>
+			<Trait type="Combat">Axe To Grind</Trait>
+			<Trait type="Story Feat">Foeslayer</Trait>
+			<Trait type="Story Feat">Vengeance</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>The War</Name>
+			<Text> 	You grew up against the backdrop of a major military conflict that affected much of your childhood world. You became accustomed to a short food supply, living in occupied territory, and moving from place to place. Several of the people you knew in your childhood were lost in the war, including members of your family.</Text>
+			<Trait type="Regional">Vagabond Child</Trait>
+			<Trait type="Story Feat">Deny the Reaper</Trait>
+		</Result>
+	</Major_Childhood_Event>
+
+	<Crime dieType="100">
+		<Result upperBound="10">
+			<Name>Adultery</Name>
+		</Result>
+		<Result upperBound="20">
+			<Name>Arson</Name>
+		</Result>
+		<Result upperBound="30">
+			<Name>Burglary</Name>
+		</Result>
+		<Result upperBound="40">
+			<Name>Heresy</Name>
+		</Result>
+		<Result upperBound="50">
+			<Name>Minor Offense (Sumptuary Law)</Name>
+		</Result>
+		<Result upperBound="60">
+			<Name>Murder</Name>
+		</Result>
+		<Result upperBound="70">
+			<Name>Rebellion/Treason</Name>
+		</Result>
+		<Result upperBound="80">
+			<Name>Robbery</Name>
+		</Result>
+		<Result upperBound="90">
+			<Name>Smuggling</Name>
+		</Result>
+		<Result upperBound="100">
+			<Name>Unlawful Use of Magic</Name>
+		</Result>
+	</Crime>
+
+	<Punishment dieType="100">
+		<Result upperBound="10">
+			<Name>Beating</Name>
+		</Result>
+		<Result upperBound="20">
+			<Name>Branding</Name>
+		</Result>
+		<Result upperBound="30">
+			<Name>Exile</Name>
+		</Result>
+		<Result upperBound="40">
+			<Name>Fine</Name>
+		</Result>
+		<Result upperBound="50">
+			<Name>Imprisonment</Name>
+		</Result>
+		<Result upperBound="60">
+			<Name>Stocks</Name>
+		</Result>
+		<Result upperBound="70">
+			<Name>Torture</Name>
+		</Result>
+		<Result upperBound="80">
+			<Name>Trial by combat</Name>
+		</Result>
+		<Result upperBound="90">
+			<Name>Trial by fire</Name>
+		</Result>
+		<Result upperBound="100">
+			<Name>Trial by water</Name>
+		</Result>
+	</Punishment>
 
 
 	

@@ -19,6 +19,7 @@ list_of_half_races = {"Half-Elf", "Half-Orc"}
 list_of_races = {"Dwarf", "Elf", "Gnome", "Human", "Halfling"}
 
 traits = dict()
+
 number_of_siblings = 0
 
 
@@ -80,6 +81,7 @@ def table_roll(table):
 
 
 def roll_homeland(race=test_race):
+
     return table_roll(races.find('%s/Homeland' % race)).get_return_string()
 
 
@@ -89,10 +91,48 @@ def roll_parents(race=test_race):
 
 def roll_circumstance_of_birth():
     data = table_roll(root.find('MiscTables/Circumstances_Of_Birth'))
-    return_string = data.get_return_string()
-    return_string += ("\n " + data.get_text())
+    return data.get_return_string() + '\n' + data.get_text()
+
+
+def roll_major_childhood_event():
+    data = table_roll(root.find('MiscTables/Major_Childhood_Event'))
+    return data.get_return_string() + "\n" + data.get_text()
+
+
+def roll_crime():
+    data = table_roll(root.find('MiscTables/Crime'))
+    return data.get_return_string()
+
+
+def roll_punishment():
+    data = table_roll(root.find('MiscTables/Punishment'))
+    return data.get_return_string()
+
+
+def print_traits():
+    return_string = "You gain access to the following traits: \n"
+    for trait in traits:
+        if traits[trait] != 'Special':
+            return_string += trait + "("+traits[trait]+") \n"
+    return return_string
+
+
+def roll_parents_profession():
+    return_string = ""
+
+
+    if 'Lower-Class' in traits:
+        return_string += table_roll(root.find('MiscTables/d20_Parents_Profession')).get_return_string()
+    else:
+        return_string += table_roll(root.find('MiscTables/Parents_Profession')).get_return_string()
+    if 'Adopted' in traits:
+        traits.pop('Adopted')
+        return_string += "\n Adopted Parent's Profession: \n" + roll_parents_profession()
 
     return return_string
+
+
+
 
 
 def roll_siblings(race=test_race):
@@ -120,9 +160,9 @@ def roll_siblings(race=test_race):
                     is_twin = True
     return_string += data.get_return_string() + "\n"
     if num_older != 0:
-        return_string += "\n" + str(num_older) + " older than you \n"
+        return_string += "\n" + "You're younger than " + str(num_older) + " sibling(s) \n"
     if num_younger != 0:
-        return_string += str(num_younger) + " younger than you"
+        return_string += "\n" + "You're older than " + str(num_younger) + " sibling(s) \n"
     if is_twin:
         if is_triplet:
             return_string += "\n You are part of triplets"
@@ -132,14 +172,37 @@ def roll_siblings(race=test_race):
     return return_string
 
 
-def roll_background(race=test_race):
+def roll_background(race):
     global number_of_siblings
+    return_string = ""
     traits.clear()
     number_of_siblings = 0
-    return "Race: " + race + "\n"\
-           + "Homeland: \n" + roll_homeland(race) + \
-           "\n" + "Parents: \n" + roll_parents(race) + "\n" \
-           + "Siblings: \n" + roll_siblings(race)
+    return_string += "Race: " + race + "\n" \
+           + "Homeland: " + "\n" \
+           + roll_homeland(race) + "\n" \
+           + "Parents: " + "\n" \
+           + roll_parents(race) + "\n" \
+           + "Siblings: " + "\n" \
+           + roll_siblings(race) + "\n" \
+           + "Circumstance of Birth: " + "\n" \
+           + roll_circumstance_of_birth() + "\n" \
+           + "Parent's Profession: " + "\n" \
+           + roll_parents_profession() + "\n" \
+           + "Major Childhood Event: " + "\n"\
+           + roll_major_childhood_event() + "\n"
+    if "Criminal" in traits:
+        return_string += "Crime: " + "\n" + roll_crime() + "\n" \
+            "Punishment: " + "\n"\
+            + roll_punishment() + "\n"
+    return_string += print_traits()
+
+    return return_string
+
+
+
+
+
+
 
 
 class Result:
@@ -176,6 +239,7 @@ class Result:
 
     def extra_roll(self, result):
         self.add_to_return("\n \t" + result.get_return_string())
+        self.text = result.text
 
 
 
@@ -190,19 +254,33 @@ async def on_ready():
 @client.event
 async def on_message(message):
     user = message.author
+    race_found = False
+
     if user == client.user:
         return
     if '/background' in message.content:
+        chosen_race = ""
         for race in list_of_half_races:
             if race.lower() in message.content.lower():
-                await message.channel.send(user.mention +"'s Background\n" + roll_background(race))
-                return
-        for race in list_of_races:
-            if race.lower() in message.content.lower():
-                user = message.author
+                chosen_race = race
+                race_found = True
+        if not race_found:
+            for race in list_of_races:
+                if race.lower() in message.content.lower():
+                    chosen_race = race
+                    race_found = True
 
-                await message.channel.send(user.mention +"'s Background\n" + roll_background(race))
+        if not race_found:
+            not_race = message.content.replace("/background", "")
+            if not_race == "":
+                await message.channel.send(user.mention + "You need to include a race!")
                 return
+            else:
+                await message.channel.send(user.mention + not_race + " is not a race.")
+                return
+        await message.channel.send(user.mention + "'s Background\n" + roll_background(chosen_race))
+
+
 
 
 
@@ -210,3 +288,8 @@ def run_bot():
 
     client.run(TOKEN)
 
+
+
+
+
+roll_background("Elf")

@@ -49,6 +49,9 @@ def table_roll(table):
         if roll_value <= int(roll_upper_bound):
             outcome.add_to_return(str(result.find('Name').text))  # appends to the output string in the result object
 
+            if result.find('Text') is not None:
+                outcome.set_text(result.find("Text").text)
+
             if result.findall('Trait') is not None:  # checks if the result gives you access to any traits
                 for trait in result.findall('Trait'):
                     outcome.add_trait(trait.text, trait.attrib["type"])   # adds the trait as a dictionary with the
@@ -82,6 +85,14 @@ def roll_homeland(race=test_race):
 
 def roll_parents(race=test_race):
     return table_roll(races.find('%s/Parents' % race)).get_return_string()
+
+
+def roll_circumstance_of_birth():
+    data = table_roll(root.find('MiscTables/Circumstances_Of_Birth'))
+    return_string = data.get_return_string()
+    return_string += ("\n " + data.get_text())
+
+    return return_string
 
 
 def roll_siblings(race=test_race):
@@ -137,6 +148,13 @@ class Result:
         self.return_string = ""
         self.num_siblings = 0
         self.traits = dict()
+        self.text = ""
+
+    def set_text(self, text):
+        self.text = text
+
+    def get_text(self):
+        return self.text
 
     def add_to_return(self, addition):
         self.return_string += addition

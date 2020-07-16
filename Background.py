@@ -24,7 +24,10 @@ races = root.find('Races')
 classes = root.find('Classes')
 list_of_half_races = {"Half-Elf", "Half-Orc"}
 list_of_races = {"Dwarf", "Elf", "Gnome", "Human", "Halfling"}
-list_of_classes = {"Alchemist", "Barbarian", "Bard", "Cavalier", "Cleric", "Druid", "Fighter", "Gunslinger", "Inquisitor", "Magus", "Monk", "Oracle", "Paladin"}
+list_of_classes = {"Alchemist", "Barbarian", "Bard", "Cavalier",
+                   "Cleric", "Druid", "Fighter", "Gunslinger", "Inquisitor",
+                   "Magus", "Monk", "Oracle", "Paladin","Ranger","Rogue","Sorcerer",
+                   "Summoner","Witch","Wizard"}
 
 traits = dict()
 

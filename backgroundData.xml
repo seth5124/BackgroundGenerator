@@ -806,6 +806,216 @@
 			<Trait type="Social">Canter</Trait>
 		</Result>
 	</Rogue>
+	<Sorcerer dieType="100">
+		<Result upperBound="10">
+			<Name>Awakened Moment</Name>
+			<Text>At some point, the dormant power within you awakened with a fright. It might have been the first time you came close to a dragon, celestial, or genie. Or the moment could have come at the grave of a great ancestor or in a lush and verdant glen. What slumbered in your blood has never quieted, and you frequently draw upon the inspiration of your awakening.</Text>
+			<Trait type="Magic">Ascendant Recollection</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name> Dreams of Something Different</Name>
+			<Text>The first hints of your exceptional nature came to you as fragments of remembered dreams or split-second visions. As these episodes increased in both frequency and clarity, they unlocked a power in your blood you didn’t know you had.</Text>
+			<Trait type="Magic">Strength Foretold</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Failed Wizard</Name>
+			<Text>Although your arcane aptitude was evident at an early age, you were pushed toward wizardry as the conduit for your magic. While you never mastered magic in this fashion, your time spent studying arcane tomes gave you obscure but often pertinent knowledge.</Text>
+			<Trait type="Magic">Reluctant Apprentice</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>One of a Kind</Name>
+			<Text>You know that sorcerous power comes from the blood, but as far as you know, none of your ancestors possessed your gift. You keep searching for the reason for your magical powers, which has led you to greater proficiency with divinations and a keen interest in the workings of your bloodline. </Text>
+			<Trait type="Magic">Knowledgeable Caster</Trait>
+		</Result>
+		<Result upperBound="50">
+			<Name>Outcast</Name>
+			<Text> 	Driven away by your family and people, your arcane gifts have always inspired both fear and revulsion. You’ve become adept at spotting hostility in others who would despise you for your power.</Text>
+			<Trait type="Magic">Outcast's Intuition</Trait>
+		</Result>
+		<Result upperBound="60">
+			<Name>Proud Heritage</Name>
+			<Text> 	You hail from a long line of prominent sorcerers with even more prominent ancestral features. Your acceptance of your bloodline brings with it a pride and imposing mien that becomes amplified among others.</Text>
+			<Trait type="Social">Imposing Scion</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Shameful Heritage</Name>
+			<Text>The obvious hints of your heritage were a source of shame to your family. No matter the manifestation of your differences, being a pariah taught you to practice your arts in secret. </Text>
+			<Trait type="Magic">Unseen But Not Undone</Trait>
+		</Result>
+		<Result upperBound="80">
+			<Name>Too Lucky</Name>
+			<Text>You’ve always had a knack for getting out of trouble. This sense of preternatural good fortune led to your inquiries into magic and the discovery of your own sorcerous powers.</Text>
+			<Trait type="Faith">Fate's Favored</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>Unharmed</Name>
+			<Text> 	At some point in your early life, you were exposed to something dangerous like a fall into stormy waters or a spell cast your way. But instead of dying, you survived entirely unscathed. This experience either first hinted at or confirmed that you were different, marking the first step on your path to sorcery.</Text>
+			<Trait type="Magic">Unscathed</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Wild Talent</Name>
+			<Text>The magic in your blood was always as uncontrollable as it has powerful. You were forced to learn control at an early age, either out of fear that your powers might hurt someone or out of remorse once they had. This relentless vigilance and self-control gave you tremendous focus and arm you with strategic methods to redirect those wild energies coursing through you.</Text>
+			<Trait type="Magic">Volatile Conduit</Trait>
+		</Result>
+	</Sorcerer>
+	<Summoner dieType="100">
+		<Result upperBound="10">
+			<Name>Abandoned</Name>
+			<Text>At some point early on, you were abandoned. This sense of loss always made you feel as though something were missing. The discovery of your eidolon and your subsequent mutual bond fostered in you the sense of companionship you’ve always longed for. </Text>
+			<Trait type="Magic">Greater Link</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name>Caretaker</Name>
+			<Text>You met your eidolon or another outsider in a moment of danger. Wounded or lost, the creature crashed between worlds and ended up at your feet. In helping this panicked, otherworldly creature, you felt a link to it. You can still draw on the inspiration from that moment when dealing with others, outsider or not.</Text>
+			<Trait type="Social">Destined Diplomat</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Forced to Confront Your Own Limits</Name>
+			<Text>The bond with your eidolon first manifested when you saw someone in danger and were unable to help. Your feeling of desperation and frustration at the limits of your own form attracted your eidolon—whether or not it was able to help you in that moment. This need to exceed your own limitations continues to manifest in the evolution of your eidolon.</Text>
+			<Trait type="Magic">Desperate Speed</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>Imaginary Friends</Name>
+			<Text>As a child, you created imaginary playmates that you felt truly spoke to and heard you. These whispers were actually the wandering thoughts of outsiders trying to make contact, knowing that someday you would have an affinity with their kind. By the time you learned to summon your eidolon and other outsiders, these whispered fragments had turned themselves into an understanding of the language of outsiders. </Text>
+			<Trait type="Social">Unintentional Linguist</Trait>
+		</Result>
+		<Result upperBound="50">
+			<Name>Monophobic</Name>
+			<Text>You were always terrified of being alone when you were younger, so you surrounded yourself with others. But it was establishing this link to your eidolon that ultimately allowed you to overcome this debilitating fear. Now, even when your eidolon is not with you, you know it’s never far away; conversely, when you have your true friend and companion with you, you are far better for it.</Text>
+			<Trait type="Faith">Perpetual Companion</Trait>
+		</Result>
+		<Result upperBound="60">
+			<Name>Outsider's Lineage</Name>
+			<Text>Lineage 	You have the blood of outsiders in your veins. This lineage either laid dormant until your powers manifested or was a storied part of your family heritage. Regardless, your connection to the planes has always been potent. No matter what other subjects you studied, your understanding of planar matters has always seemed instinctive or innate rather than the product of memorization and study.</Text>
+			<Trait type="Faith">Planar Savant</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Pick on Someone Your Own Size</Name>
+			<Text>When you were young, you or others you cared for were bullied by agents of an oppressive power. At some point, you stood up against one or many of the tyrants, feeling that somehow you were bigger, stronger and more resilient than you actually were. You later realized that this support was the first trace of your eidolon trying to make contact with you. You can still draw on that power today, making your aura strong and your presence powerful.</Text>
+			<Trait type="Magic">Twinned Presence</Trait>
+		</Result>
+		<Result upperBound="80">
+			<Name>Raising Gone Wrong</Name>
+			<Text>You lost someone important to you. Through means, luck, or simple pity, you had the chance to raise that person from the dead, but something went wrong with the spell and the raising did not occur… at least not as planned. Your lost friend or kin’s soul bonded with a powerful outsider on the other side of the veil and returned to you as your eidolon. Possessed of some of the memories and experiences of the life you spent together, your companion feels a stronger devotion than even most others of its kind.</Text>
+			<Trait type="Faith">Loyalty Across Lifetimes</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>Saved by Another</Name>
+			<Text>Someone or something saved you from great danger. It might have been a family member who saved you from a precipitous fall or adventurers who saved you from a marauding monster. Your sense of gratitude fostered a strong sense of protectiveness, particularly when defending your allies or your eidolon. </Text>
+			<Trait type="Combat">Dedicated Defender</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Stranger in Your Own Skin</Name>
+			<Text>You have felt awkward and uncomfortable your entire life, as if you were born into a body that wasn’t truly yours. Your quest to become what you’ve always felt you should be led you to your eidolon, in which you found what you see as your own idealized form. The link that you and your eidolon share allows you to escape some of the inherent limits of your form from time to time.</Text>
+			<Trait type="Magic">Linked Surge</Trait>
+		</Result>
+	</Summoner>
+	<Witch dieType="100">
+		<Result upperBound="10">
+			<Name>Apprenticed</Name>
+			<Text>Your development was guided by a mortal or magical creature, such as a wisewoman, hag, dryad, elf, or pixie, who instructed you in the arts of spellcasting, potions, charms, and hexes.</Text>
+			<Trait type="Magic">Hedge Magician</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name>Desperate Accident</Name>
+			<Text>You lived an ordinary life until one day catastrophe struck and you called out desperately to any power that would come to your aid. The entity that gave you this power might be benevolent or sinister in nature, but ever since you called it, the being remains close to you.</Text>
+			<Trait type="Combat">Reckless</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Forbidden Lore</Name>
+			<Text>In your youth, there was something you fervently desired—perhaps love, wealth, or revenge. But no matter how hard you tried, you couldn’t obtain that which you coveted. Only when you turned your eye to ancient tomes and ruins and experimented with strange powers beyond your comprehension were you able to get what you wanted.</Text>
+			<Trait type="Magic">Dangerously Curious</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>Found Familiar</Name>
+			<Text>When you were young, you happened upon a strange animal with whom you forged an instant bond. It instructed you in casting spells and became your closest, most trusted companion.</Text>
+			<Trait type="Race">Animal Friend</Trait>
+		</Result>
+		<Result upperBound="50">
+			<Name>Gifted</Name>
+			<Text>You received your magical ability as a gift from a supernatural being, such as an angel, devil, god, ancient dragon, or powerful fey. This creature expects you to act on its behalf in exchange for the power it loaned you. </Text>
+			<Trait type="Magic">Magical Knack</Trait>
+		</Result>
+		<Result upperBound="60">
+			<Name>Inborn Power</Name>
+			<Text>Many fey creatures are born with the innate ability to cast spells, and either because of having fey blood in your lineage or being born near fey lands you too were gifted this talent. </Text>
+			<Trait type="Magic">Magical Lineage</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Initiated</Name>
+			<Text>When you came of age, a coven of witches initiated you into their circle because you showed great promise. After your initiation ritual, you changed on a fundamental level.</Text>
+			<Trait type="Social">Mentored</Trait>
+		</Result>
+		<Result	 upperBound="80">
+			<Name>Invocation</Name>
+			<Text>When you reached adolescence, you wanted power and you wanted it immediately. You didn’t have the patience or tolerance to endure endless years of boring theory and formal magical training, so you offered up your body and soul in an invocation to an entity that would grant your desire.</Text>
+			<Trait type="Faith">Oathbound</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>Possessed</Name>
+			<Text>For reasons you may never understand, an otherworldly entity took possession of you in your formative years. Since then, your mortal body has been the vessel for this mysterious power. </Text>
+			<Trait type="Magic">Possessed</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Unknown</Name>
+			<Text>The circumstances by which you gained your powers are confusing, even to you. You may have received them when you stepped into a enchanted land or touched a strange artifact, or perhaps you simply awoke one day with them. You strive to find the meaning of your powers, as they drive your life in unforeseen directions.</Text>
+			<Trait type="Social">Seeker</Trait>
+		</Result>
+	</Witch>
+	<Wizard dieType="100">
+		<Result upperBound="10">
+			<Name>Brains over Brawn</Name>
+			<Text>You were bullied or excluded throughout your life because you lacked physical power and fighting prowess. To compensate, you turned to transmutation magic. Your practice and perseverance has granted you skill with spells of that school. </Text>
+			<Trait type="Magic">Tenacious Shifting</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name>Dangerous Intellect</Name>
+			<Text>At a young age, those around you, whether family or friends, realized that your intellect was more than mere precociousness. As your sense of curiosity became dangerous, those responsible for you pushed you into studying magic in the hopes that you would find infinite puzzles to solve.</Text>
+			<Trait type="Social">Tireless Logic</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Fitting In</Name>
+			<Text>You hail from a long line of sorcerers or from a community known for its natural affinity for magic. Your manifestation of wizardly talent, as opposed to blood-based sorcery, caused you to hide those talents at a young age, and then to disguise them as sorcery to the best of your ability later. You still retain some tricks from this early misdirection.</Text>
+			<Trait type="Magic">Shrouded Casting</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>Gifted Pride</Name>
+			<Text>Your affinity for magic has made you somewhat crass and arrogant, though some find your blunt disposition charming or worthy of respect. The air of superiority surrounding you is palpable and allows you to use you intellect to cow others at times when lesser individuals might barely get a word in.</Text>
+			<Trait type="Social">Bruising Intellect</Trait>
+		</Result>
+		<Result upperBound="50">
+			<Name>Mortality's Mirror</Name>
+			<Text>Your childhood innocence ended the moment you realized that someday you would die. This revelation may have come to you at the deathbed of a beloved relative, during a bloody siege against your homeland, or via some other eye-opening event. You have spent the rest of your life trying to master magic in order to change this most universal fate from stealing your last breaths away. You now have a keen eye for the magic of death and for discerning answers to ancient riddles.</Text>
+			<Trait type="Magic">Greater Purpose</Trait>
+		</Result>
+		<Result upperBound="60">
+			<Name>Righting a Wrong</Name>
+			<Text>In your youth, you witnessed an event that changed the fate of many or of a tragic few, such as a natural disaster (like a flood, hurricane, or fire) or simply a friend’s unfortunate accident during a childish game. You were burdened by the knowledge that magic—perhaps even a spell as simple as feather fall—could have changed the course of lives. You’ve dedicated yourself to magic in an effort to make sure that you are never subject to the capricious whims of fate again.</Text>
+			<Trait type="Magic">Desperate Resolve</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Storied Lineage</Name>
+			<Text>Your family name is synonymous with wizardry of the highest caliber. Magic was your destined path before you were even born, and both your family and those who know of your lineage have supported this notion your entire life, granting you an unwavering confidence in your talents. While the pursuit of arcane mastery is never easy, you are driven to live up to the expectations set forth for you.</Text>
+			<Trait type="Magic">Resilient Caster</Trait>
+		</Result>
+		<Result upperBound="80">
+			<Name>The Way Things Work</Name>
+			<Text>Magic came alive the first time you held a magic item. The notion of extraordinary magic resting within something as seemingly ordinary as a ring, amulet, or stoppered vial changed the way you viewed the world, and ever since you’ve possessed a sense of curiosity and awe for all magic items. </Text>
+			<Trait type="Magic">Magic Crafter</Trait>
+			<Trait type="Story Feat">Eldritch Researcher</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>Unpaid Debt</Name>
+			<Text>Someone saved your life at great cost. Whether through healing magic or basic heroism, your savior gave her life that you might live. Striving to repay this debt has led you to study magic, the only thing capable of making enough of a difference in the world to make you feel that you have earned the gift given to you. This sense of purpose has engendered an unshakable resolve in you.</Text>
+			<Trait type="Faith">Principled</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Unquenchable Hunger for Knowledge</Name>
+			<Text>For most wizards, magic is an end to which all studies strive, but not for you. For you, magic is a means to an end—and that end is knowledge. Your desire to know all of the secrets of the world requires the ability to cross continents in a blink, ride the winds, breathe water like a fish, and survive any kind of trap. Your unquenching quest for knowledge has made you ever ready for danger.</Text>
+			<Trait type="Magic">Eldritch Delver</Trait>
+		</Result>
+	</Wizard>
+
 
 </Classes>
 <Races>

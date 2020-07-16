@@ -3,6 +3,14 @@ import random
 import xml.etree.ElementTree as ET
 import discord
 from dotenv import load_dotenv
+# TODO: convert to more efficient string concatenation solution
+# TODO: ensure trait list doesn't include duplicates
+# TODO: Finish Class tables
+# TODO: Write Influential Associates Table
+# TODO: Conflict system
+# TODO: Romantic Relationships
+# TODO: Relationships with fellow adventurers
+
 
 load_dotenv()
 token_file = open("token.txt", "r")
@@ -16,7 +24,7 @@ races = root.find('Races')
 classes = root.find('Classes')
 list_of_half_races = {"Half-Elf", "Half-Orc"}
 list_of_races = {"Dwarf", "Elf", "Gnome", "Human", "Halfling"}
-list_of_classes = {"Alchemist", "Barbarian", "Bard", "Cavalier", "Cleric", "Druid", "Fighter", "Gunslinger", "Inquisitor", "Magus"}
+list_of_classes = {"Alchemist", "Barbarian", "Bard", "Cavalier", "Cleric", "Druid", "Fighter", "Gunslinger", "Inquisitor", "Magus", "Monk", "Oracle", "Paladin"}
 
 traits = dict()
 
@@ -160,15 +168,25 @@ def roll_siblings(race=test_race):
                 else:
                     is_twin = True
     return_string += data.get_return_string() + "\n"
+
+    relative_string = ""
+    if num_older == num_younger:
+        relative_string += "You're the middle child"
+        return return_string + relative_string
     if num_older != 0:
-        return_string += "\n" + "You're younger than " + str(num_older) + " sibling(s) \n"
+        relative_string += "\n" + "You're younger than " + str(num_older) + " sibling(s) \n"
+    else:
+         relative_string += "\n You're the eldest sibling \n"
     if num_younger != 0:
-        return_string += "\n" + "You're older than " + str(num_younger) + " sibling(s) \n"
+        relative_string += "\n" + "You're older than " + str(num_younger) + " sibling(s) \n"
+    else:
+        relative_string += "\n You're the youngest sibling"
     if is_twin:
         if is_triplet:
-            return_string += "\n You are part of triplets"
+            relative_string += "\n You are part of triplets"
         else:
-            return_string += "\n You have a twin"
+            relative_string += "\n You have a twin"
+    return_string += relative_string
 
     return return_string
 

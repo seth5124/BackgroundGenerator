@@ -538,6 +538,166 @@
 			<Trait type="Faith">Inspired</Trait>
 		</Result>
 	</Magus>
+	<Monk dieType="100">
+		<Result upperBound="10">
+			<Name>Bellicose Historian</Name>
+			<Text>What started as a scholar’s curiosity in exotic fighting styles bloomed into a fanatical desire not just to learn about martial arts, but to master them.</Text>
+			<Trait type="Social">Style Sage</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name>Classically Schooled</Name>
+			<Text>Training from dawn to dusk to hone every inch of your body into a fighting instrument, you studied with scores of other students in an academy or school dedicated to one specific martial art</Text>
+			<Trait type="Social">Simple Disciple</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Elite Fighting Force</Name>
+			<Text>You learned your fighting skills as one of a highly trained group dedicated to a special purpose, such as guarding a temple or protecting a noble. Your training emphasized unobtrusive teamwork and unquestioned dedication to some higher purpose. </Text>
+			<Trait type="Social">Veiled Disciple</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>Tournament Champion</Name>
+			<Text>a shining example of your style or order, you’ve honed martial prowess through spirited and exciting competition. </Text>
+			<Trait type="Combat">Martial Performer</Trait>
+		</Result>
+		<Result upperBound="50">
+			<Name>Lineage Holder</Name>
+			<Text>You are the senior or sole student of a great master. You rose to prominence early and received secret training in an art that is rare and exotic. Having achieved a strong foundation in the physical and metaphysical elements of this martial art, you’ve been designated the lore keeper for its history and traditions, and must now find new student or students to train.</Text>
+			<Trait type="Faith">Martial Manuscript</Trait>
+		</Result>
+		<Result upperBound="60">
+			<Name>Nature's Discipline</Name>
+			<Text>Just as many great masters learned and crafted styles from the beauty and majesty of nature, your fighting style comes from time spent in the wild rather than from formal training. You have seen firsthand how the mantis hunts, how the tiger swipes, and how the crane beats its wings. Your observance of the natural world gave you the ability to extrapolate combat forms without traditional training.</Text>
+			<Trait type="Combat">Nature's Mimic</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Secret Student</Name>
+			<Text>Your teacher and fellow students grew up as part of a conquered people, forbidden to train at war and forced to conceal the fighting style as seemingly harmless dances and your weapons as mundane tools… until the day you all you could rise up against tyranny.</Text>
+			<Trait type="Combat">Hidden Hand</Trait>
+		</Result>
+		<Result upperBound="80">
+			<Name>Spirit Teacher</Name>
+			<Text>Your martial training is both physical and metaphysical in nature, allowing you to unlock a higher state of consciousness that allows you to draw on the wisdom and power of long-dead masters.</Text>
+			<Trait type="Faith">Spirit Sense</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>Unsuspecting Master</Name>
+			<Text>You were trained in martial arts through unorthodox methods such as seemingly menial tasks or training through conditioning exercises that promised the smallest scrap of food as a reward. Your nontraditional training makes you resourceful and clever.</Text>
+			<Trait type="Combat">Surprise Weapon</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Wandering Savant</Name>
+			<Text>Although you’ve received some formal training in exotic combat, you decided to put your skills to the test and further your learning by wandering the wide world.</Text>
+			<Trait type="Faith">Wanderer's Shroud</Trait>
+		</Result>
+	</Monk>
+	<Oracle dieType="100">
+		<Result upperBound="10">
+			<Name>Battle</Name>
+			<Text>In your early years, a battle broke out near your home and you were embroiled in the fighting. At the end of the battle, you were the only one left standing, with scores of slain foes strewn at your feet.</Text>
+			<Trait type="Religion">Veteran of Battle</Trait>
+			<Trait type="Story Feat">Battlefield Healer</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name>Bones</Name>
+			<Text> 	In your formative years, you were entombed or buried alive in a graveyard. For days, you lay within the grave until your terror strangely turned to comfort. Since your return, you’ve been a different person: part mortal and part ghost, in possession of the powers of the dead.</Text>
+			<Trait type="Faith">Fearless Defiance</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Flame</Name>
+			<Text>a great fire consumed you and laid waste to the environment around you. It might have devoured your family, friends, or an entire settlement, but you survived unburned as if the fire did not dare to touch you. Since that day, you’ve tamed fire as though it were a savage animal bent to your will.</Text>
+			<Trait type="Magic">Flame-Touched</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>Heavens</Name>
+			<Text>The night sky’s mysteries have always enthralled you. But one night, while you gazed upon the stars, the perfect order of the universe revealed itself and you nearly went mad from the revelation. Since that night, you’ve possessed strange powers over the heavens</Text>
+			<Trait type="Religion">Starchild</Trait>
+		</Result>
+		<Result upperBound="50">
+			<Name>Life</Name>
+			<Text>a terrible plague afflicted your homeland, killing thousands. You caught the disease, but instead of dying from it, you flourished. As you grew healthier, so did everyone you came into contact with.</Text>
+			<Trait type="Faith">Sacred Touch</Trait>
+		</Result>
+		<Result upperBound="60">
+			<Name>Lore</Name>
+			<Text>You were able to speak before any other child your age. Rather than stumble through the rudimentary syllables of language, you spoke in full sentences, reciting the greatest literature of many languages in story, song, and poem. Sometimes you spoke of events that had not yet come to pass, and the wise came to seek your counsel. Your gift came at a cost, however—though your knowledge is vast, your body and mind carry a curse.</Text>
+			<Trait type="Faith">Scholar of the Great Beyond</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Nature</Name>
+			<Text>You became separated from your family and lost in the untamed wilderness for many days, months, or years. The wilderness took its toll, but when you finally emerged from the wild, you were its master.</Text>
+			<Trait type="Religion">Child of Nature</Trait>
+		</Result>
+		<Result upperBound="80">
+			<Name>Stone</Name>
+			<Text>You were buried beneath the earth, possibly after an avalanche or earthquake. For 3 days the earth covered you, until at the end of the third day you emerged from the mountain unharmed but not unchanged.</Text>
+			<Trait type="Magic">Earth-Touched</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>Waves</Name>
+			<Text>You were swept beneath the surface of the water once. You should have drowned, but instead you washed up on shore after a long interval. You emerged from the depths afflicted with a strange condition but otherwise unharmed.</Text>
+			<Trait type="Magic">Water-Touched</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Wind</Name>
+			<Text>In your early years, you were caught in a powerful storm that ravaged the countryside, destroying everything in its path. Bolts of lightning struck your body and thunder deafened your ears, but when you came to the storm’s tranquil center, the tempest ceased. Since then you’ve had power over storms, though you still bear the mark of the great storm you endured.</Text>
+			<Trait type="Magic">Storm-Touched</Trait>
+		</Result>
+	</Oracle>
+	<Paladin dieType="100">
+		<Result upperBound="10">
+			<Name>Divine Calling</Name>
+			<Text>An otherworldly agent of law and good—such as an angel, empyreal lord, or perhaps some other celestial envoy of the gods—tasked you to be a divine champion. You accepted the calling (maybe grudgingly) because ultimately you realize that the laws of destiny and one’s divine calling cannot be denied. In return, that celestial agent watches over you and makes sure you can fully realize your destiny and meet the course that has been set for you by a higher power.</Text>
+			<Trait type="Faith">Blessed</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name>Dread Penance</Name>
+			<Text>You, or perhaps your family, owe a debt for some past wrongdoing or vice. Maybe you made deals with some unscrupulous loan sharks during a gambling binge or your not-so-distant ancestors were responsible for the persecution of a marginalized group of people. Whatever the offense, your past action hangs over your head and fills you with guilt. You’ve taken a solemn oath to make good on this past misdeed. Only then will you feel like your life is truly worthwhile.</Text>
+			<Trait type="Faith">Oathbound</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Holy Epiphany</Name>
+			<Text>Your faith and purpose came in a brilliant flash of insight. Maybe you suddenly realized that evil can be stopped only with vigilance and deliberate action, or maybe an epiphany showed you that the innocent need protection from corrupt forces for good to flourish in the world. Whatever the nature of your epiphany, it guides your actions and gives you insights others lack.</Text>
+			<Trait type="Faith">Inspired</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>Zealous Devotion</Name>
+			<Text>Maybe your faith was not popular among those around you during your youth. Maybe you have strange or controversial views regarding your religion, and the other members of your congregation find your practices bizarre or insulting. Whatever the case, your faith is constantly being questioned regardless of your obviously pious nature, and such persecution only serves to embolden your zeal.</Text>
+			<Trait type="Faith">Indomitable</Trait>
+		</Result>
+		<Result upperBound="50">
+			<Name>Moral Debt</Name>
+			<Text>The world and all things material are intrinsically corrupt. All creatures are born with a moral debt, and only by fighting evil, upholding law, and championing the common good can one be truly free of that corruption. You work every day to pay off this debt and move those around you to do the same.</Text>
+			<Trait type="Faith">Principled</Trait>
+			<Trait type="Story Feat">Fearless Zeal</Trait>
+		</Result>
+		<Result upperBound="60">
+			<Name>Mark of Faith</Name>
+			<Text>You were born with the mark of your faith. Maybe at some point you rebelled against such branding, or it could be you’ve always accepted the mark as an indicator of your destiny. In either case, it was a harbinger of the paladin path. </Text>
+			<Trait type="Faith">Birthmark</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Righteous Mentor</Name>
+			<Text>A paladin of note and great honor took you under her wing and taught you many things. She taught you how to adhere to your oath with grace and dignity, and how the simple act of doing so was enough to earn the respect and devotions of others.</Text>
+			<Trait type="Social">Natural-Born Leader</Trait>
+		</Result>
+		<Result upperBound="80">
+			<Name>Warrior of Truth</Name>
+			<Text>Early in your life, you learned that the philosophies of law and good not only create the best society but also reveal truths that would otherwise remain obscured. You are rarely clouded by pure dogma; instead you’re unafraid to question and create your own path toward truth, justice, and righteousness.</Text>
+			<Trait type="Magic">Skeptic</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>Knight-Errant</Name>
+			<Text>You know that evil stalks the world, and only one who is dedicated to the spread of good can stop these vile forces. To make sure fiends and wrongdoers do not go unpunished, you adopted the code of the paladin in order to travel the land and eradicate the wicked. Your goal is the relentless pursuit to seek out evil and put it down. </Text>
+			<Trait type="Social">Seeker</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Terrible Secret</Name>
+			<Text>You know a terrible secret about an ancient evil that threatens your homeland or perhaps even the entire world. You have sworn to keep this secret quiet lest it gain power in the retelling, but you also must work to thwart the evil whenever possible. This at times contradictory path has led you many places in your travels, and the knowledge you have gleaned from your adventures continues to serve you well in your fight against the wicked.</Text>
+			<Trait type="Faith">Scholar of the Great Beyond</Trait>
+		</Result>
+	</Paladin>
+
+
 </Classes>
 <Races>
 

@@ -696,6 +696,19 @@
 			<Trait type="Faith">Scholar of the Great Beyond</Trait>
 		</Result>
 	</Paladin>
+	<Ranger dieType="100">
+		<Result upperBound="10">
+			<Name>An Eye for an Eye</Name>
+			<Text>The choice of your favored enemy was nothing more than simple vengeance. Perhaps you lost a loved one, family, or even a whole community to the vicious rampaging of a ferocious beast, or saw your entire homeland swallowed up by monstrous hordes. No matter the reason, your drive to hunt down and destroy creatures of their kind won’t be sated so long as even one lives. </Text>
+			<Trait type="Faith">Tireless Avenger</Trait>
+			<Trait type="Story Feat">Foeslayer</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name>Ancient Hatred</Name>
+			<Text>The history of your people is a saga of struggle against another race. Though common among elves and orcs or dwarves and giants, many different races can have such longstanding animosity. Your choice of a favored enemy was a simple outgrowth of this racial antipathy.</Text>
+			<Trait type="Social"></Trait>
+		</Result>
+	</Ranger>
 
 
 </Classes>

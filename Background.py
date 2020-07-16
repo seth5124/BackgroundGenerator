@@ -9,14 +9,14 @@ token_file = open("token.txt", "r")
 TOKEN = token_file.read()
 GUILD = "Server"
 
-
-
 test_race = "Dwarf"
 
 root = ET.parse('backgroundData.xml').getroot()
 races = root.find('Races')
+classes = root.find('Classes')
 list_of_half_races = {"Half-Elf", "Half-Orc"}
 list_of_races = {"Dwarf", "Elf", "Gnome", "Human", "Halfling"}
+list_of_classes = {"Alchemist", "Barbarian", "Bard", "Cavalier", "Cleric", "Druid", "Fighter", "Gunslinger", "Inquisitor", "Magus"}
 
 traits = dict()
 
@@ -56,7 +56,7 @@ def table_roll(table):
             if result.findall('Trait') is not None:  # checks if the result gives you access to any traits
                 for trait in result.findall('Trait'):
                     outcome.add_trait(trait.text, trait.attrib["type"])   # adds the trait as a dictionary with the
-                    # value being the trait type
+                    # value being the trait type (Could be done better with a Trait class perhaps)
 
             if 'hasExtraRoll' in result.attrib:  # checks if the result requires any extra rolls
                 extra_rolls = result.findall('ExtraRoll')
@@ -99,6 +99,11 @@ def roll_major_childhood_event():
     return data.get_return_string() + "\n" + data.get_text()
 
 
+def roll_class_background(chosen_class):
+    data = table_roll(classes.find(chosen_class))
+    return data.get_return_string() + "\n" + data.get_text()
+
+
 def roll_crime():
     data = table_roll(root.find('MiscTables/Crime'))
     return data.get_return_string()
@@ -120,7 +125,6 @@ def print_traits():
 def roll_parents_profession():
     return_string = ""
 
-
     if 'Lower-Class' in traits:
         return_string += table_roll(root.find('MiscTables/d20_Parents_Profession')).get_return_string()
     else:
@@ -130,9 +134,6 @@ def roll_parents_profession():
         return_string += "\n Adopted Parent's Profession: \n" + roll_parents_profession()
 
     return return_string
-
-
-
 
 
 def roll_siblings(race=test_race):
@@ -172,7 +173,7 @@ def roll_siblings(race=test_race):
     return return_string
 
 
-def roll_background(race):
+def roll_background(race, chosen_class): # Function returns the entire background in one large string so it can be easily sent
     global number_of_siblings
     return_string = ""
     traits.clear()
@@ -190,6 +191,8 @@ def roll_background(race):
            + roll_parents_profession() + "\n" \
            + "Major Childhood Event: " + "\n"\
            + roll_major_childhood_event() + "\n"
+    return_string += "Class: " + chosen_class + "\n"\
+        + roll_class_background(chosen_class) + "\n \n"
     if "Criminal" in traits:
         return_string += "Crime: " + "\n" + roll_crime() + "\n" \
             "Punishment: " + "\n"\
@@ -197,12 +200,6 @@ def roll_background(race):
     return_string += print_traits()
 
     return return_string
-
-
-
-
-
-
 
 
 class Result:
@@ -255,11 +252,13 @@ async def on_ready():
 async def on_message(message):
     user = message.author
     race_found = False
+    class_found = False
 
     if user == client.user:
         return
     if '/background' in message.content:
         chosen_race = ""
+        chosen_class = ""
         for race in list_of_half_races:
             if race.lower() in message.content.lower():
                 chosen_race = race
@@ -269,16 +268,15 @@ async def on_message(message):
                 if race.lower() in message.content.lower():
                     chosen_race = race
                     race_found = True
+        for player_class in list_of_classes:
+            if player_class.lower() in message.content.lower():
+                chosen_class = player_class
+                class_found = True
 
-        if not race_found:
-            not_race = message.content.replace("/background", "")
-            if not_race == "":
-                await message.channel.send(user.mention + "You need to include a race!")
-                return
-            else:
-                await message.channel.send(user.mention + not_race + " is not a race.")
-                return
-        await message.channel.send(user.mention + "'s Background\n" + roll_background(chosen_race))
+        if not race_found or not class_found:
+            await message.channel.send(user.mention + ", You are missing information. You need include a race and a class.")
+            return
+        await message.channel.send(user.mention + "'s Background\n" + roll_background(chosen_race, chosen_class))
 
 
 
@@ -289,7 +287,3 @@ def run_bot():
     client.run(TOKEN)
 
 
-
-
-
-roll_background("Elf")

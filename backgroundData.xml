@@ -1,6 +1,544 @@
 <?xml version="1.0"?>
 
 <Background>
+<Classes>
+	<Alchemist dieType="100">
+		<Result upperBound="10">
+			<Name>Accidental Discovery</Name>
+			<Text>Your keen intellect has always been an asset in your studies of the alchemical arts, but along with your logic and rationale, you have a “sense” for alchemy. This intuition sometimes leads to discoveries through methods most of your peers would never have thought possible, but that you somehow know will work.</Text>
+			<Trait type="Magic">Alchemical Intuition</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name>Firebug</Name>
+			<Text>Although you’ve studied all aspects of the alchemist’s craft, your have a talent for fire. Fire has always been a seductive and powerful force that you have either embraced with glee or focused care. You are adept at exploiting a weakness to fire when you recognize it. </Text>
+			<Trait type="Magic">Focused Burn</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Wasn't String Enough</Name>
+			<Text>You suffered something at an early age that made you feel powerless. Maybe a relative died from plague, a friend was crushed beneath rubble you were too weak to move, or some other horrible tragedy occurred. You turned to alchemy to transcend the limitations of your physical form. Your relentless dedication has made your bolstering abilities more persistent.</Text>
+			<Trait type="Magic">Enduring Mutagen</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>Magic for the Uninclined</Name>
+			<Text>You were always interested in the arcane, but lacked the innate magic of sorcerers or the single-minded dedication possessed by wizards. As a disciple of science, the magic of faith was also closed to you. You dedicated yourself to alchemy, focusing on extracts that mimic the magic you once hoped to wield. That original interest in magic still grants you occasional rare insight into the workings of your formulae. </Text>
+			<Trait type="Magic">Cross-Knowledge</Trait>
+		</Result>
+		<Result upperBound="50">
+			<Name>Master Craftsman</Name>
+			<Text>The first time you saw air mix with the shapeless goo of a tanglefoot bag or shielded your eyes at the heatless light of a sunrod, you became ensnared by the wonders of alchemy. You’ve since labored to learn the secrets to crafting such items.</Text>
+			<Trait type="Magic">Alchemical Adept</Trait>
+		</Result>
+		<Result upperBound="60">
+			<Name>Physician</Name>
+			<Text>Alchemy was the natural outgrowth of your time spent learning the healer’s craft. Your first extracts were the accidental byproduct of making poultices and elixirs. Continuing your studies, you found the natural compassion you had as a healer mixing with an alchemist’s cold logic, forging you into a clinician unlike most others.</Text>
+			<Trait type="Magic">Precise Treatment</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Formulae Stickler</Name>
+			<Text>To you, alchemy is a delicate and complex symphony requiring multiple different elements to work together to produce the perfect result. Though others in your craft come up with ways to substitute certain ingredients when making bombs or mutagens, you disdain such practices, deeming them pollutions. To you, there is always a perfect ingredient and its addition makes your alchemy more potent.</Text>
+			<Trait type="Magic">Meticulous Concoction</Trait>
+		</Result>
+		<Result upperBound="80">
+			<Name>Nature's Foe</Name>
+			<Text>You lost something or someone important to you through the cruel indifference of nature. Perhaps you watched someone get swallowed by a storm-tossed sea or witnessed a summer forest fire destroy your home and all of your possessions. No matter the impetus, the unpredictability of nature made you feel small and helpless. Your subsequent devotion to alchemy has been in no small part due to a desire to exert control over nature itself, a domineering intent palpable to all creatures of nature.</Text>
+			<Trait type="Social">Unnatural Revenge</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>To Recreate a Miracle</Name>
+			<Text>Your life or the life of someone you loved was saved by a magical elixir. Witnessing this instilled a sense of awe for the art of alchemy. Although your research has not yet been able to recreate the sheer potency of that draught long ago, your years questing to duplicate it have made you adept at brewing potions.</Text>
+			<Trait type="Magic">Perfectionist's Brew</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Mad Alchemist</Name>
+			<Text>Rampant curiosity and a near fearlessness of the unknown drove you to experiment with the rudiments of alchemy. That curiosity has uncovered interesting alchemical secrets, at the cost of alchemical instability. Some consider your experiments mad.</Text>
+			<Trait type="Magic">Unstable Mutagen</Trait>
+		</Result>
+
+	</Alchemist>
+	<Barbarian dieType ="100">
+		<Result upperBound="10">
+			<Name>Vengeance</Name>
+			<Text>When you were young, a great wrong was done to you, a loved one, your family, or your people. This experience tore you apart and reduced you to a being of primal emotions. Dreams of vengeance became your only promise of comfort.</Text>
+			<Trait type="Combat">Axe to Grind</Trait>
+			<Trait type="Story Feat">Foeslayer</Trait>
+			<Trait type="Story Feat">Vengeance</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name>Champion of a God</Name>
+			<Text>At your coming-of-age ritual, your deity, totem, or patron spirit sparked your soul with a religious zeal. This entity might be a beast spirit, a warmongering god, a demon lord, or some other supernatural entity. In the name of this otherworldly force you become an unstoppable warrior—the bane of all your tribe’s foes. </Text>
+			<Trait type="Faith">Inspired</Trait>
+			<Trait type="Story Feat">Champion</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Conquest</Name>
+			<Text>Upon coming of age, you went on your first raid, where you learned the thrill of violence and chaos and the satisfaction that came with the spoils of your victory. When your enemies dare to stand against you, your rage rekindles until you have conquered and subdued them.</Text>
+			<Trait type="Combat">Killer</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>Hated Foe</Name>
+			<Text>In your formative years, you learned to despise a certain individual, tribe, kingdom, empire, race, or monster due to some slight it inflicted upon you or your people. This foe lurks ever close to your thoughts. So intense is your hatred that the mere thought of this foe can incite your rage.</Text>
+			<Trait type="Combat">Reckless</Trait>
+			<Trait type="Story Feat">Foeslayer</Trait>
+		</Result>
+		<Result upperBound="50">
+			<Name>Personal Flaw</Name>
+			<Text>There is a part of yourself that you hate more than anything else. In your adolescence, you first realized this imperfection—to your lasting shame. This might be a gentle part of yourself you wish to eliminate or a brutal, prideful, greedy, or monstrous side you can’t control. Your rage is fueled by self-loathing, or by projecting this part of yourself onto a foe you wish to destroy.</Text>
+			<Trait type="Combat">Axe to Grind</Trait>
+		</Result>
+		<Result upperBound="60">
+			<Name>Hatred of Civilization</Name>
+			<Text>When you first encountered civilization in your youth, its weak and decadent people revolted you. Once, such people were free and strong, but rules and laws made them feeble. Your rage is the wild part—the pure part—of yourself that separates you from the craven ways of “civilized” people.</Text>
+			<Trait type="Social">Savage</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Persecution</Name>
+			<Text>You grew up under the persecution of another power—perhaps a rival tribe, an expansionistic empire, or a tribe of violent monsters. Beaten and bloodied, your people barely survived the onslaught. But the beatings made you strong and taught you how to channel the pain into something useful. Since that time, the flame of rage has burned inside you, waiting to be released against your oppressors.</Text>
+			<Trait type="Combat">Bullied</Trait>
+		</Result>
+		<Result upperBound="80">
+			<Name>One of a Dying Breed</Name>
+			<Text>You grew up knowing that your people were slowly dying out—that your extinction was inevitable in the face of the changing world. In youthful vigor, you declared that your fire would not be snuffed without a fight. Your rage stems from the desperate desire to be remembered, to make a mark upon the world before the sun sets on your dwindling kind. When you rage, a single thought permeates your burning mind: If you’re going down, you’re taking everyone with you. </Text>
+			<Trait type="Combat">Reactionary</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>Chaos Embraced</Name>
+			<Text>You grew up in wild lands where there were no laws except for those of nature—the laws of the predator and the prey. You searched for meaning in the world, in the gods, in the prayers of priests, in the patterns of the stars, but you found nothing. There is no true order to the natural universe except for that of raw and unbridled power. Chaos is the natural state of all things, and that’s how you like it.</Text>
+			<Trait type="Social">Unpredictable</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Bloodthirsty</Name>
+			<Text>The first time you spilled a deserving foe’s blood and watched the thing’s life ebb out onto the hard ground, you found yourself filled with a mad, euphoric ecstasy like none other. The memory of this visceral experience returns to you in every battle, like an insatiable addiction that can only be abated with further bloodshed. </Text>
+			<Trait type="Combat">Bloodthirsty</Trait>
+			<Trait type="Story Feat">Innocent Blood</Trait>
+		</Result>
+	</Barbarian>
+	<Bard dieType="100">
+		<Result upperBound="10">
+			<Name>Celebrity</Name>
+			<Text>In your formative years, you saw a player or troupe of players perform before an enthralled audience. That’s when you decided that you wanted to be up on that stage performing for the adulation of the crowd.</Text>
+			<Trait type="Conditional">either the Charming social trait or the Influence social trait.</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name>Cultural Mandate</Name>
+			<Text>There has always been a revered storyteller in your culture. This could be an official skald, a royal minstrel, the washerman who spins parables and folk wisdom, or the old farmer who tells tall tales at the pub. Ever since you were young, your community has groomed you to fulfill this role.</Text>
+			<Trait type="Social">Fast-Talker</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Dabbler</Name>
+			<Text>Whether you grew up rich or poor, you refused to accept the limits imposed by your social class or means. In your youth, you determined to learn a little bit of all there was to know. You may not be the master of any one career, but the breadth of your experience is wide, textured, and diverse.</Text>
+			<Trait type="Social">Worldly</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>For Love</Name>
+			<Text>When you were young, you tried to express yourself to your beloved using song or poetry. Driven by desire, you refined your skill and learned to articulate raw emotion in story and song. </Text>
+			<Trait type="Religion">Ear for Music</Trait>
+			<Trait type="Story Feat">True Love</Trait>
+			<Trait type="Special">d12_romantic</Trait>
+		</Result>
+		<Result upperBound="50">
+			<Name>Gift</Name>
+			<Text>	Someone gave you a special instrument or a collection of songs and stories at a time in your life when you needed them most. You have treasured this object above all other possessions, and it started you on a path to new songs and stories.</Text>
+			<Trait type="Social">Seeker</Trait>
+		</Result>
+		<Result upperBound="60">
+			<Name>Ongoing Patron</Name>
+			<Text>When you were young, a person with money or power took an interest in your art and sponsored you. Most of what you created was dictated by the patron’s tastes, and you probably still work for this patron, who maintains a strong influence over your life.</Text>
+			<Trait type="Faith">Oathbound</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Spy</Name>
+			<Text>Someone once asked you to employ your artistic talents as an excuse to observe a person, steal an object, or retrieve a piece of information. Infiltrating various houses and estates in the guise of an actor, minstrel, or storyteller, you honed your art while being paid better than most other performers. </Text>
+			<Trait type="Social">Criminal</Trait>
+		</Result>
+		<Result upperBound="80">
+			<Name>Troupe of Players</Name>
+			<Text>You were born into, helped found, or fell in with a troupe of traveling players. You spent your early years rambling from one place to another—from tavern to tavern, town to town, or even between countries. Long hours traveling gave you plenty of time to practice and hone your skill.</Text>
+			<Trait type="Race">World Traveler</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>Virtuoso</Name>
+			<Text>One day, you picked up an instrument or told a tale, and your raw natural ability captivated everyone who saw you perform. Words and music have always come to you effortlessly, as naturally as breathing.</Text>
+			<Trait type="Social">Talented</Trait>
+			<Trait type="Story Feat">Magnum Opus</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Worldshaker</Name>
+			<Text>Since childhood, you’ve observed the world around you and translated those observations into story and song. Your unique, unabashed vision resonated with the audience, revealing new perspectives as well as simple truths. You’re used to people quoting your words and looking up to you, though some authority figures deem you a rabble-rouser and troublemaker.</Text>
+			<Trait type="Social">Natural-Born Leader</Trait>
+		</Result>
+	</Bard>
+	<Cavalier dieType="100">
+		<Result upperBound="10">
+			<Name>Tragedy and Loss</Name>
+			<Text>In your formative years, you experienced a significant tragedy that forged you into the person you’ve become.</Text>\
+			<Trait type="Social">Grief-Filled</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name>Faith</Name>
+			<Text>You embraced a religious faith at an early age and devoted your life to its ideals. You soon learned that it was not enough to follow and worship. Faiths need champions—people capable of defending the virtues, tenets, and precepts of the faith from those who would seek to corrupt, alter, or destroy it.</Text>
+			<Trait type="Faith">Indomitable Faith</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Champion of the People</Name>
+			<Text>You grew up among common people. You were close to these people and you witnessed their oppression, their suffering, and their helplessness. Someone needed to stand up and protect them, and that someone would be you. </Text>
+			<Trait type="Regional">Militia Veteran</Trait>
+			<Trait type="Story Feat">Champion</Trait>
+			<Trait type="Story Feat">Town Tamer</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>Squired</Name>
+			<Text>You were a young squire who served a very different kind of knight. This knight taught you more than the art of battle she taught you to live by a strict code to guide your actions and your sword.</Text>
+			<Trait type="Social">Influence</Trait>
+			<Trait type="Faith">Oathbound</Trait>
+		</Result>
+		<Result upperBound="50">
+			<Name>Military Order</Name>
+			<Text>At the beginning of your career, you served with a company of mercenaries, rogues, and professional soldiers. The experience taught you how to work strategically with diverse groups.</Text>
+			<Trait type="Combat">Tactician</Trait>
+			<Trait type="Social">Worldly</Trait>
+		</Result>
+		<Result upperBound="60">
+			<Name>Personal Code</Name>
+			<Text>In your early years, you made sense of the chaotic, disorderly world you grew up in by formulating your own code of ethics and behavior. Though you are the ultimate arbiter and authority over this code, you do not break it, for without it your existence loses all meaning. </Text>
+			<Trait type="Faith">Principled</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Equestrian</Name>
+			<Text>The first time you rode a horse, you discovered a kinship with it and knew you were born to ride, and the superior horsemanship you gained through your bond with the animal propelled you into the ranks of the cavaliers.</Text>
+			<Trait type="Social">Beast Bond</Trait>
+		</Result>
+		<Result upperBound="80">
+			<Name>Entitlement</Name>
+			<Text>You became a cavalier early in your career, not by personal action or effort but by family favor, connections, or promotion. You were given fine weapons, tactical training, a mount, and the edicts of your order. Now you must learn how to follow them.</Text>
+			<Trait type="Social">Rich Parents</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>Honor Bound</Name>
+			<Text>Long ago, a promise was made that you are bound to fulfill. This could be a vow you made in your youth, or one made by an ancient forebear. Regardless, you must follow a cavalier’s code despite any personal doubts or misgivings until you have fulfilled the terms of the oath. </Text>
+			<Trait type="Faith">Oathbound</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Old Soldier</Name>
+			<Text>When you were young, you discovered an ancient chivalric oath sworn by knights of yore. Though the beautiful edicts of this oath seem to have been forgotten by the world, this old way fulfills you and gives you purpose.</Text>
+			<Trait type="Faith">Inspired</Trait>
+		</Result>
+	</Cavalier>
+	<Cleric dieType="100">
+		<Result upperBound="10">
+			<Name>Angelic Encounter</Name>
+			<Text>a supernatural being, such as an angel or demon, appeared to you and proclaimed that you were destined to perform a great task in service to your god. You might have tried to deny it—and you even might still have doubts—but eventually you took up the mantle of a holy warrior and chose to meet this destiny head on, either to prove to yourself that you’re worthy of such a destiny or to show your supernatural messenger that you cannot be pigeon-holed so easily. </Text>
+			<Trait type="Faith">Prophesied</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name>Atonement</Name>
+			<Text>In your youth, you committed actions you are not proud of. Your deeds left dark stains upon your soul, ones so deep they might take a lifetime to wash away. When you hit rock-bottom—whether through greed, addiction, hedonism, or simply lack of good sense—you turned to faith, vowing to atone for all of the horrible acts you’ve committed.</Text>
+			<Trait type="Faith">Oathbound</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Converted</Name>
+			<Text>In your early life, you followed a different faith, a different god or powerful entity, or perhaps no faith at all. a representative of your current faith showed you the error of your ways and converted you, and you couldn’t be happier. You can only hope to do for others what this individual did for you.</Text>
+			<Trait type="Faith">Inspired</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>Devoted</Name>
+			<Text>From your earliest memory, you’ve had a close relationship with your deity. This entity has been a constant presence in your life: your greatest comfort, best companion, truest love, or some combination of the three. You’ve never had to see or speak with your deity to know that he watches over you, and the beliefs and criticisms of others do not faze you—your faith is enough</Text>
+			<Trait type="Faith">Blessed</Trait>
+			<Trait type="Story Feat">Fearless Zeal</Trait>
+		</Result>
+		<Result upperBound="50">
+			<Name>Healed</Name>
+			<Text>As a child, you were afflicted with a terrible physical or mental illness or a debilitating wound that prevented you from functioning in society. a miracle worker touched your body and commanded you to be well, and—for perhaps the first time in your life—you were whole. Now you live your life in tribute to the deity whose divine healer restored you, and perhaps hope to bestow similar gifts unto deserving nonbelievers.></Text>
+			<Trait type="Faith">Sacred Touch</Trait>
+			<Trait type="Story Feat">Battlefield Healer</Trait>
+		</Result>
+		<Result upperBound="60">
+			<Name>Reborn</Name>
+			<Text>You died or nearly died. In the midst of this experience, your mind came to a place of quiet where you witnessed your deity or its agents pulling your body and spirit back from the brink of death. Every day since has been a gift, and you strive to understand the reason you have been saved while countless others perish.</Text>
+			<Trait type="Bloodline Race">Deathtouched</Trait>
+			<Trait type="Story Feat">Arisen</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Religious Colony</Name>
+			<Text>You grew up in a religious colony or settlement. This may have been a small village in the hinterlands or a kingdom-sized theocracy devoted to a single religion. When you came of age, you decided to serve your god and country as a cleric, a choice that garnered respect, dignity, and honor among your people. </Text>
+			<Trait type="Social">Natural-Born Leader</Trait>
+		</Result>
+		<Result upperBound="80">
+			<Name>Revalation</Name>
+			<Text>In your youth, a deity granted you visions or dreams that revealed startling truths. These visions might have been prophetic, deeply insightful, or filled with extraordinary solutions to problems that plagued you, your family, or your community. So powerful and compelling were the visions that you devoted your life to the deity.</Text>
+			<Trait type="Social">Worldly</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>Sanctuary</Name>
+			<Text>When you were young, you did a very wicked deed—or were accused of one—and fled to the only place that could shelter you from the law. You found sanctuary among the worshipers of a deity, and they took you in and protected you. In time, you joined the faithful to serve their cause in the world, though the shadow of your past sin still lurks beyond the church’s walls.</Text>
+			<Trait type="Social">Criminal</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Taken in by the Church</Name>
+			<Text>You spent your youth in a church or monastery serving as an acolyte or doing menial work on the grounds, either taken in as an orphan, sent there by your equally devout parents, or by taking on the faith of your own volition. The traditions and rituals of the religion served as your way of life throughout your adolescence, and you left that pious community with the skills to champion your faith in the world. </Text>
+			<Trait type="Faith">Child of the Temple</Trait>
+		</Result>
+	</Cleric>
+	<Druid dieType="100">
+		<Result upperBound="10">
+			<Name>Lost in the Wild</Name>
+			<Text>You got lost in the wilderness and were forced to survive on your own. You may have wandered desert dunes, thick forest, or high mountains—or perhaps you were shipwrecked on a desert island. Young and vulnerable, you feared the natural dangers of the world at first, but acclimated to the natural way of life as you learned to tap into the primal power of the world.</Text>
+			<Trait type="Combat">Resilient</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name>Fey Meeting</Name>
+			<Text>Walking in the woods, you met a fey creature, such as a brownie, elf, nymph, gnome, sprite, or treant. This magical being taught you how to tend the natural world in the gentle manner of the fey.</Text>
+			<Trait type="Magic">Magical Knack</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Spirit of Nature</Name>
+			<Text>Through a ritual, vision, or dream, you communed with a primordial spirit of nature. In the form of a majestic beast, this spirit charged you with preserving the natural world from those who would destroy it. You are instilled with the spirit of this creature—a small fragment of its power grows in you as you mature.</Text>
+			<Trait type="Faith">Sacred Touch</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>Tree Tender</Name>
+			<Text>You learned to care for plants in your youth by tending a small garden, orchard, grove, or field. These plants flourished like no others. You’ve always understood plants better than people.</Text>
+			<Trait type="Faith">Devotee of the Green</Trait>
+		</Result>
+		<Result upperBound="50">
+			<Name>Druid Circle</Name>
+			<Text>You discovered, or were initiated into, a circle of druids that protects an expanse of wilderness. The druids taught you of their duty to nature and the powers that the natural world granted them. Soon you learned enough to join the circle as an initiate.</Text>
+			<Trait type="Social">Mentored</Trait>
+		</Result>
+		<Result upperBound="60">
+			<Name>Civilized Outcast</Name>
+			<Text>For a time, you lived in an urban environment. But you soon discovered that social communities, bureaucracies, and laws made you feel constrained and unnatural. You left civilization and retreated into the wild at the first opportunity. You still retain the lessons, habits, and refinements of civilized behavior, but your heart belongs to nature.</Text>
+			<Trait type="Social">Civilized</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Savage</Name>
+			<Text>	You spent your formative years among a tribe or village far from civilization. The elders chose you as successor and taught you the lore of the elements and the animals.</Text>
+			<Trait type="Social">Savage</Trait>
+		</Result>
+		<Result upperBound="80">
+			<Name>Raised by Beasts</Name>
+			<Text>You were reared in part by wild animals. Most of what you know you learned by observing these beasts, their natural instincts being unburdened by artifice or manipulation. Even though you possess a humanoid body, the beasts recognize you as one of their own.</Text>
+			<Trait type="Race">Animal Friend</Trait>
+			<Trait type="Story Feat">Feral Heart</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>Avatar</Name>
+			<Text>Once you were an ordinary youth. But when the natural world needed saving, the land chose you as its champion, lending you as much power as you were able to control. You might not understand the reasons for your power, but you are one with nature and your will is the will of the world.</Text>
+			<Trait type="Religion">Child of Nature</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Beastlord</Name>
+			<Text>Natural birds and beasts have always obeyed you. From your earliest years, you’ve possessed a gentleness or a power that allows you to communicate with animals as though you shared a common language. Perhaps you have fey blood or traces of lycanthrope ancestry.</Text>
+			<Trait type="Social">Beast Bond</Trait>
+		</Result>
+	</Druid>
+	<Fighter dieType="100">
+		<Result upperBound="10">
+			<Name>Adventure</Name>
+			<Text>Since you can remember, you sought to become a great warrior. Inspired by legends of the past or personal heroes of your civilization, you longed to wield steel and carve your way in the world. </Text>
+			<Trait type="Social">Seeker</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name>Conscripted</Name>
+			<Text>You didn’t choose the military life so much as you were drafted into it. You have a non-military background and skill set. Who knows what course your life might have taken had you not been forced to take up arms?</Text>
+			<Trait type="Social">Worldly</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Duty</Name>
+			<Text>You took up the sword because no one else would. When a great danger threatened your home, you stepped forth to meet the challenge, though you were only a youth with just the strength of your arm and steadfastness of your courage to see you through</Text>
+			<Trait type="Combat">Courageous</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>Gladiator</Name>
+			<Text>As an adolescent, you learned to fight and kill because your master made you, and if you had not learned, you would be dead. Killing was a way of life—a means of survival. At first you did it because you had to, but that soon changed when you heard the chorus of the crowd. </Text>
+			<Trait type="Combat">Killer</Trait>
+			<Trait type="Social">Life of Toil</Trait>
+			<Trait type="Story Feat">Champion</Trait>
+		</Result>
+		<Result upperBound="50">
+			<Name>Joined the Watch</Name>
+			<Text>Your village, town, city, or tribe needed new recruits for the volunteer watch patrol, and you joined up—whether for money, duty, peace, or power. This rudimentary training gave you an understanding of civilized justice and showed you how to wield a weapon with skill.</Text>
+			<Trait type="Regional">Militia Veteran</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Mercenary</Name>
+			<Text>Everyone needs to earn a living, and in your youth you were fast, strong, or tough enough to fight for pay. There are good causes and bad causes, but at the end of the day, it all comes down to money. Sometimes you got easy jobs, like guarding merchant caravans; other times the jobs are rough, like fighting in a rebel lord’s private army.</Text>
+			<Trait type="Social">Mercenary</Trait>
+		</Result>
+		<Result upperBound="80">
+			<Name>On the Street</Name>
+			<Text>You spent adolescence in a seedy part of town. You learned to fight dirty and fight mean. Turns out you were good at it. Your skills drew the interest of gang and guild leaders, tavern keepers, and anyone else who needed hired muscle.</Text>
+			<Trait type="Social">Child of the Streets</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>Schooled</Name>
+			<Text>You learned to fight in a structured environment where you were exposed to a variety of weapons, armor, strategies, and tactics. You learned to fight as part of a unit, how to follow orders and how to command a squad.</Text>
+			<Trait type="Combat">Tactician</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Survival</Name>
+			<Text>You spent some part of your life in the wild—in places that abide by the laws of nature rather than those of civilization. You survived by being stronger, faster, and more cunning than the predators. That meant you fought not for coin, honor, or principle, but for your very life.</Text>
+			<Trait type="Combat">Resilient</Trait>
+		</Result>
+	</Fighter>
+	<Gunslinger dieType="100">
+		<Result upperBound="10">
+			<Name>Any Fool Can Swing a Sword</Name>
+			<Text>Sometime during your youth, you came to the conclusion that most melee and ranged weapons are crude and primitive compared to firearms. It puzzles you that anyone with martial aptitude deigns to devote their skill to anything other than firearms. You disregard such “lesser” weapons and prefer the feel of your trusty firearm over any other tool of war.</Text>
+			<Trait type="Combat">Reckless Contempt</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name>Bucking tradition</Name>
+			<Text>You come from a proud tradition of ancient arms and august codes of conduct like those followed by paladins, cavaliers, and samurai. Instead of following in the vaunted steps of your predecessors, though, you chose to learn the art of firearms to the shock and perhaps even anger of your family and peers. Your break with tradition fostered in you a nearly insurmountable will that fuels your identity as a gunslinger.</Text>
+			<Trait type="Combat">Resolve of the Rejected</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Custodian of the Future</Name>
+			<Text>Firearms are not just an effective implement for killing or a curious mechanical trinket; they are the next step in the technological development of your people. Your passion for the workings of your weapons has you constantly assembling and dismantling firearms to truly understand their mechanics. This ongoing dedication improves your ability to repair firearms and make them deadlier while in your skilled hands.</Text>
+			<Trait type="Combat">Unblemished Barrel</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>Defining Moment</Name>
+			<Text>Guns are inexorably linked to a moment where your life dramatically changed. Perhaps you were so sickly as a child that you couldn’t turn a crossbow’s winch or bend a bow, but firearms showed you that you could still hunt and fight. Perhaps you picked up a firearm in a desperate moment to help a wounded gunslinger and knew that you had just taken your first step along the same path. a firearm at your side instills in you a sense of purpose and destiny that no one can take away. </Text>
+			<Trait type="Combat">Black Powder Fortune</Trait>
+		</Result>
+		<Result upperBound="50">
+			<Name>Look at What I can Do</Name>
+			<Text>The lure of something new and showy drove you to first pick up a gun. Although several near mishaps taught you to respect the volatile weapon and the powder that powers it, you still enjoy doing trick shots and getting the oohs and aahs of a crowd. </Text>
+			<Trait type="Combat">Black Powder Bravado</Trait>
+		</Result>
+		<Result upperBound="60">
+			<Name>Mechanical Savant</Name>
+			<Text>For you, the lure of firearms is not the effect they produce, but the science and mechanical process behind the effect. Your endless tinkering and perfectionism have made your own gun easier to upgrade.</Text>
+			<Trait type="Combat">Just Like New</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Black Powder Presence</Name>
+			<Text>You grew up belittled and even beaten for not being the biggest or the strongest of your compatriots, family, or race. With no burgeoning aptitude for magic, you looked for some other way to exceed those who found superiority in brute strength—and you found it in gunslinging.</Text>
+			<Trait type="Combat">Larger Than Life</Trait>
+		</Result>
+		<Result upperBound="80">
+			<Name>Sacred Charge</Name>
+			<Text>Your gunslinger training is more than just martial skill—it’s a calling. Perhaps you are part of an elite group of guards serving and defending a temple or faith. Conversely, you might come from a land where firearms represent the pinnacle of your society’s advancement or are the last vestige of those who came before. Your sense of higher purpose allows you to fight on and keep firing when winning seems impossible.</Text>
+			<Trait type="Combat">Never Stop Shooting</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>Shock and Awe</Name>
+			<Text>The sound and fury of gunfire is as potent a weapon as the pellets and bullets your weapon discharges. You live for the reflexive wince that others make when they jump at the sound of a firearm, and laugh heartily at the amazement you inspire in others with your cacophonous black-powder weapons</Text>
+			<Trait type="Combat">Startling Report</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Some Things Are Stronger Than Magic</Name>
+			<Text>You grew up either oppressed by magic cruelly wielded or loathing the elitism of those who possessed such arcane or divine power. Searching for something non-magical that relies on skill and practice led you to the study and wielding of firearms. You relish trumping pompous spellcasters with a quick draw and a keen eye. </Text>
+			<Trait type="Combat">Black Powder Interjection</Trait>
+		</Result>
+	</Gunslinger>
+	<Inquisitor dieType="100">
+		<Result upperBound="10">
+			<Name>Bureaucracy’s Bane</Name>
+			<Text>You chose the inquisitor‘s path because you have no taste for the petty rules and regulations that mire the leaders of your faith in inaction and inefficacy. You know that you are an instrument of your deity and that your directives do not require intercession by the less motivated.</Text>
+			<Trait type="Faith">Focused Disciple</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name>Chaplain</Name>
+			<Text>You learned long ago that in the heat of battle and under the pall of war, even the most devout can waiver in faith. You subsequently dedicated yourself to stewarding the faith of soldiers and allies in times of great conflict. </Text>
+			<Trait type="Combat">Battlefield Disciple</Trait>
+			<Trait type="Story Feat">Battlefield Healer</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Exemplar</Name>
+			<Text>You found early on that you lacked the logic or the vocabulary to communicate the virtues of faith—more precisely, your faith—to others. You decided that the best way to foster respect and appreciation for your god was not with words, but with action. </Text>
+			<Trait type="Faith">Beacon of Faith</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>Failed Cleric</Name>
+			<Text>Your original training in divine magic was as a cleric, but your faith eventually distilled into you the ability to hear lies and see weaknesses in the “unfaithful.”</Text>
+			<Trait type="Faith">Schooled Inquisitor</Trait>
+		</Result>
+		<Result upperBound="50">
+			<Name>Faith-Bringer</Name>
+			<Text>You know that in order to bring the light of your deity to others, you must traverse hostile territories and face even more hostile inhabitants.</Text>
+			<Trait type="Social">Weathered Emissary</Trait>
+			<Trait type="Story Feat">Fearless Zeal</Trait>
+		</Result>
+		<Result upperBound="60">
+			<Name>False Witness</Name>
+			<Text>You’ve seen innocent people suffer due to another’s lies. While these injustices made you feel powerless, they’ve also kindled a desire in you to punish those who regard truth so cheaply.</Text>
+			<Trait type="Combat">Vigilant Battler</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Few Left to Safeguard the Faith</Name>
+			<Text>You are the vanguard of your faith. Perhaps you are a pilgrim for a good deity in an unholy land, or the secret enforcer of a sect that operates in the shadows of the world. You are accustomed to working alone and with little guidance from the superiors of your church, trusting your own moral judgment to act on behalf of your god. This certainty acts as a defense against the magic of other, “lesser” deities.</Text>
+			<Trait type="Faith">Disdainful Defender</Trait>
+		</Result>
+		<Result upperBound="80">
+			<Name>Temple Detective</Name>
+			<Text>Your ability to sniff out falsehood and see weakness in others made you uniquely suited to guard the religious houses of your order.</Text>
+			<Trait type="Social">Truth's Agent</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>The Path of Righteous Rage</Name>
+			<Text>Your faith does not manifest in calm prayer or serene meditation. You achieve the transcendent feeling of the divine when you are in the throes of battle for your deity.</Text>
+			<Trait type="Combat">Indelible Ire</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Zealot</Name>
+			<Text>Your devotion is fanatical and your powers are clearly proof of your connection with the divine. Although you know that other gods bestow similar powers upon their own disciples, you either revile or pity those of “lesser” faiths.</Text>
+			<Trait type="Faith">Zealous Striker</Trait>
+		</Result>
+	</Inquisitor>
+	<Magus dieType="100">
+		<Result upperBound="10">
+			<Name>A Mage Without Magic</Name>
+			<Text>Early in your arcane training, you were exposed to antimagic. The powerlessness you felt from all of your magic being stripped away left you feeling desperate and helpless. You vowed to never be that helpless child again, to be strong in such moments, putting you on the path of the magus.</Text>
+			<Trait type="Combat">Dispelled Battler</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name>Conflicting Legacy</Name>
+			<Text>You were born to a family or clan with two great pedigrees: one of magic and one of battle. Unable to choose either path for fear of alienating a mentor or parent, you sought to master both. Your dedication to the blending of martial and magical has been so intense that your martial prowess feeds your arcane power. </Text>
+			<Trait type="Magic">Arcane Revitalization</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>Ready for Anything</Name>
+			<Text>For you, the path of the magus is not about the fluid blend of disparate fields of study or conquering an insurmountable challenge, but the art of preparation for any obstacle that comes your way. a dedicated and logical person, you hone the magus affinity for operating all manner of magical devices from blind luck to a refined procedure.</Text>
+			<Trait type="Magic">Pragmatic Activator</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>Lost Teacher</Name>
+			<Text>Your magus training was interrupted when you lost your teacher through the displacement of your family, lack of funds to continue schooling, or the teacher’s unexpected death. Despite this hardship, the time you spent with your mentor had already sown the seeds of your training and you’ve been able to continue on your own in the time since—ceaselessly seeking, reading, and learning from any magical text you can find. </Text>
+			<Trait type="Magic">Self Taught Scholar</Trait>
+		</Result>
+		<Result upperBound="50">
+			<Name>Promise Keeper</Name>
+			<Text>Your dreams of becoming a wizard were cut short by unfortunate circumstances, such as the death of your family or clan’s matriarch or patriarch, hostile invading forces, conscription in the army, and so on. This forced you to become a protector and stunted the growth of your studies. Though you have successfully blended the two disciplines, you still long for the unfulfilled potential of your career as a wizard.</Text>
+			<Trait type="Magic">Cross-Disciplined</Trait>
+		</Result>
+		<Result upperBound="60">
+			<Name>Shameful Secret</Name>
+			<Text>You come from either a proud military and martial background or a legacy of skilled wizards. When you developed an aptitude for two different powers viewed as incompatible by your family or teachers, it drove you to hide half of your abilities and to pretend full-blown competency with the other. Some of the tricks you used to perpetrate this deception have stayed with you to this day.</Text>
+			<Trait type="Magic">Partial Protege</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>Spell Backfire</Name>
+			<Text>At some point during your magical training, you attempted to cast a spell and failed. But rather than being wasted, the arcane energy reabsorbed itself into your body, waiting to be reused in some other way. When the arcane energy exploded outward through your staff or some other instrument you wielded, you received your first glimpse of the ways that magic could be repurposed—a versatility you retain today.</Text>
+			<Trait type="Magic">Malleable Magic</Trait>
+		</Result>
+		<Result upperBound="80">
+			<Name>Spell's Edge</Name>
+			<Text>The first time you held a magic weapon and felt the thrum of arcane energy within, you knew that magic and melee were meant to be joined. Since that moment, magic weaponry has become symbolic of the most potent syntheses of your magus training, and your ability to create magical weapons and imbue mundane arms with magic still resonates with this focus.</Text>
+			<Trait type="Magic">Bladed Magic</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>Vindication</Name>
+			<Text>You spent your formative years trying to convince combat instructors of the virtues of magic and arcane mentors of the importance of strength in arms, only to be mocked and exiled from both disciplines. Since then, you’ve wandered from master to master, honing your knowledge of both fields of study to show them all that not only have you achieved power, but you’ve also eclipsed all those who shunned you.</Text>
+			<Trait type="Magic">Arcane Temper</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>What If</Name>
+			<Text>	You don’t know the meaning of impossible. Everyone around you thinks you have your head stuck in the clouds, but you continually strive to achieve things that have never been accomplished before—perhaps things that have never even been dreamed of. Bucking convention has brought numerous failures, but you’ve learned from your mistakes and are able to snatch victory over seemingly impossible odds. </Text>
+			<Trait type="Faith">Inspired</Trait>
+		</Result>
+	</Magus>
+</Classes>
 <Races>
 
 	<Dwarf>
@@ -1404,6 +1942,7 @@
 			<Name>Troubled First Love</Name>
 			<Text>Your first love was everything you imagined it would be. That is, until you were separated from your beloved. This may have been the result of distance, changing perspectives, death, or differences in class or family. Some have said this made you jaded—you think it has granted you insight on how the world really works.</Text>
 			<Trait type="Social">Worldly</Trait>
+			<Trait type="Special">d12_romantic</Trait>
 		</Result>
 		<Result upperBound="55">
 			<Name>Imprisoned</Name>

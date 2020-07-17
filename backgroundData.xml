@@ -2547,7 +2547,457 @@
 		</Result>
 	</Punishment>
 
+	<Influential_Associates dieType="100">
+		<Result upperBound="5">
+			<Name>The Hunter</Name>
+			<Text>	This person was a lone wolf who nonetheless cautiously allowed you to become a member of her solitary pack. She taught you how to thrive on your own in spite of the many perils and natural dangers of your native environment.</Text>
+			<Trait type="Religion">Child of Nature</Trait>
+		</Result>
+		<Result upperBound="10">
+			<Name>The Pariah</Name>
+			<Text>	You met a disgraced exile, and found in his words and attitudes something that spoke to you. What once seemed true in your religion, society, or family began to appear false the more time you spent with this person, and you quickly learned not to trust everyone you meet—especially among those who would claim to be most deserving of it.</Text>
+			<Trait type="Social">Suspicious</Trait>
+		</Result>
+		<Result upperBound="15">
+			<Name>The Confidante</Name>
+			<Text>There was a person in your life to whom you could tell anything. She knows your deepest secrets and your emotional weaknesses and vulnerabilities just as you know hers. This person could be a valuable friend and a frightening enemy, so you make sure to never divulge her secrets or give her a reason to do so with yours.</Text>
+			<Trait type="Social">Trustworthy</Trait>
+		</Result>
+		<Result upperBound="20">
+			<Name>The Mentor</Name>
+			<Text>You had a mentor who taught you everything worth knowing about life. This could have been the person who taught you the heroic abilities you possess, or simply a kindred spirit who helped form your worldview.</Text>
+			<Trait type="Social">Mentored</Trait>
+		</Result>
+		<Result upperBound="25">
+			<Name>The Mercenary</Name>
+			<Text>With this person, there was always a cost. No deed was done making a trade for something of equal or greater value. Whether this individual’s actions tended toward good, evil, or pure balance, he was always fair in his dealings. You respected this trait and it influenced your own philosophy.</Text>
+			<Trait type="Social">Mercenary</Trait>
+		</Result>
+		<Result upperBound="30">
+			<Name>The Lover</Name>
+			<Text>You had a romantic connection in your adolescent years, and this person deeply influenced your personality. Perhaps this was a first love, a casual partner you grew close to, or the one who got away. The experience bolstered your confidence in romantic interactions even though you often find your thoughts still straying toward that special someone from so long ago. </Text>
+			<Trait type="Social">Charming</Trait>
+			<Trait type="Story Feat">True Love</Trait>
+			<Trait type="Special">d12_Romantic</Trait>
+		</Result>
+		<Result upperBound="35">
+			<Name>The Fool</Name>
+			<Text>One of your close associates was a clown who mocked propriety and custom, instead engaging in wild and somewhat random actions from time to time. After a while, you learned that there was simple wisdom to this foolery—a careless worldview that taught you how to cast off concern.</Text>
+			<Trait type="Social">Unpredictable</Trait>
+		</Result>
+		<Result upperBound="40">
+			<Name>The Liege Lord</Name>
+			<Text>You became close with someone you were bound to serve, be it a minor lord or lady, master (in the case of a slave), prince or princess, king or queen. Though this person held power over you, she held you closer than a subject or servant. As a result, you’re used to dealing with and being close to power, and your name is known among the ranks of the privileged.</Text>
+			<Trait type="Social">Influence</Trait>
+		</Result>
+		<Result upperBound="45">
+			<Name>The Relative</Name>
+			<Text>There is a relative you were especially close to. To you, this person was the meaning of family. He helped shepherd you into adulthood, teaching you everything you know about the world. You are bound to this person or his memory, and you strive to keep a promise, vow, or oath that you made to him.</Text>
+			<Trait type="Faith">Oathbound</Trait>
+		</Result>
+		<Result upperBound="50">
+			<Name>The Boss</Name>
+			<Text>You once gained employment under an organized and powerful individual with far-reaching influence. When the boss was present, everyone listened. This could have been a military commander, tribal chieftain, guild leader, or gang leader. From the boss, you learned how to make people listen, make them see reason, and keep them in line.</Text>
+			<Trait type="Social">Natural-Born Leader</Trait>
+		</Result>
+		<Result upperBound="55">
+			<Name>The Academic</Name>
+			<Text>One of your associates had such a lust for knowledge that she could never be satisfied with simple answers or obvious solutions. This desire for knowledge frequently exceeded her need for companionship, but you were the single exception. Through this association you developed a keen appreciation for numbers, geometry, logic, hard study, and problem solving.</Text>
+			<Trait type="Magic">Mathematical Prodigy</Trait>
+		</Result>
+		<Result upperBound="60">
+			<Name>The Criminal</Name>
+			<Text>One of your associates committed crimes regularly. He regaled you with many stories of daring robberies and break-ins—and perhaps even murders. You learned most of what you know of the criminal element from him, and he trusted you as a friend. </Text>
+			<Trait type="Social">Canter</Trait>
+		</Result>
+		<Result upperBound="65">
+			<Name>The Seer</Name>
+			<Text>	You were close to a person who claimed to see the future—perhaps an oracle, seer, prophet, or merely some festival charlatan. Whether they’re true or a trick, you’ve seen visions of distant places and of times that may come to pass. The seer’s influence either made you into an optimist with a drive to change the future or a fatalist resigned to accept it. </Text>
+			<Trait type="Faith">Scholar of The Great Beyond</Trait>
+		</Result>
+		<Result upperBound="70">
+			<Name>The Mystic</Name>
+			<Text>You were especially close to a holy person in your community who fundamentally changed your life by opening your eyes to the incredible powers that exist beyond the natural world. Regardless of whether you follow a faith, certain religious artifacts, rituals, and texts played a large part in making you the person you are.</Text>
+			<Trait type="Faith">Child of the Temple</Trait>
+		</Result>
+		<Result upperBound="75">
+			<Name>The Dead One</Name>
+			<Text>One of your greatest influences was a sentient undead creature, such as a ghost, lich, grave knight, wraith, or vampire. You encountered it on several occasions and survived…mostly unscathed. Through this strange relationship you learned of its mortal life, giving you perspective on your own life.</Text>
+			<Trait type="Bloodline Race">Deathtouched</Trait>
+			<Trait type="Story Feat">Glimpse Beyond</Trait>
+		</Result>
+		<Result upperBound="80">
+			<Name>The Fiend</Name>
+			<Text>In your adolescent years, you dealt with or were possessed by a fiend who lent you raw power at a time of great need. This experience tainted your body and mind and changed your life. Some part of the demon remains inside you like an old friend, influencing you toward destructive ends.</Text>
+			<Trait type="Magic">Possessed</Trait>
+			<Trait type="Story Feat">Damned</Trait>
+		</Result>
+		<Result upperBound="85">
+			<Name>The Wanderer</Name>
+			<Text>You knew someone who traveled from place to place with the changing of the wind, such as a minstrel, convict, merchant, outcast, soldier, or sailor. This person brought you wondrous mementos and told you of all the places he had traveled and the people who lived there, inspiring a wanderlust within you. </Text>
+			<Trait type="Social">Worldly</Trait>
+		</Result>
+		<Result upperBound="90">
+			<Name>The Champion</Name>
+			<Text>You were close to someone who excelled at athletic endeavors and tests of strength or skill. Through your friendship or rivalry, you developed the competitive spirit that continues to drive you in everything you do.</Text>
+			<Trait type="Social">Ambitious</Trait>
+		</Result>
+		<Result upperBound="95">
+			<Name>The Craftsperson</Name>
+			<Text>One of your major influences cherished perfection in every form of art. This person might have followed any path in life, from craftsperson to artist to assassin. From this person you developed a disciplined mind, a solitary focus, and the ability to create something useful and beautiful.</Text>
+			<Trait type="Social">Artisan</Trait>
+		</Result>
+		<Result upperBound="100">
+			<Name>Well-Connected Friend</Name>
+			<Text>In your circle of disparate associates, there was someone everyone knew. This person collected friends like trophies, and she had contacts in every social or professional circle. Through this connection, you continue to meet and associate with a wide variety of people in every walk of life. </Text>
+			<Trait type="Race">Well-Informed</Trait>
+		</Result>
+	</Influential_Associates>
 
-	
+	<Conflicts dieType="20">
+		<Result upperBound="1" CP="1">
+			<Name>Minor Failure</Name>
+			<Text>You failed a friend, family member, or loved one who depended on you to fulfill an important task.</Text>
+		</Result>
+		<Result upperBound="2" CP="1">
+			<Name>Petty Crime</Name>
+			<Text>You committed a minor crime, like vandalism, trespassing, or mischief.</Text>
+		</Result>
+		<Result upperBound="3" CP="1">
+			<Name>Told a Lie</Name>
+			<Text>You deliberately made someone believe something that was not true to further your own goals.</Text>
+		</Result>
+		<Result upperBound="4" CP="1">
+			<Name>Broke a Promise</Name>
+			<Text>You swore an oath or vow that was important to someone else, but you did not keep your promise.</Text>
+		</Result>
+		<Result upperBound="5" CP="2">
+			<Name>Humiliation</Name>
+			<Text>You publicly humiliated or scandalized someone with either true or slanderous information.</Text>
+		</Result>
+		<Result upperBound="6" CP="2">
+			<Name>Negligence</Name>
+			<Text>You caused someone else to suffer by your own inaction, disregard, or excessive recklessness.</Text>
+		</Result>
+		<Result upperBound="7" CP="2">
+			<Name>Minor Theft</Name>
+			<Text>You stole several small or inexpensive items that belonged to someone else.</Text>
+		</Result>
+		<Result upperBound="8" CP="3">
+			<Name>Seducer</Name>
+			<Text>You tempted or manipulated someone to act in accordance with your whim, careless of whether it was in their own best interests.</Text>
+		</Result>
+		<Result upperBound="9" CP="3">
+			<Name>Cheater</Name>
+			<Text>You broke a rule, law, contract, or agreement for your own gain.</Text>
+		</Result>
+		<Result upperBound="10" CP="4">
+			<Name>Betrayal</Name>
+			<Text>	You betrayed someone who trusted you.</Text>
+		</Result>
+		<Result upperBound="11" CP="4">
+			<Name>Malign Associates</Name>
+			<Text>You allied with a destructive creature, organization, or individual.</Text>
+		</Result>
+		<Result upperBound="12" CP="5">
+			<Name>Destroyed a Reputation</Name>
+			<Text>You deliberately ruined the honor, reputation, or fortunes of another individual or group.</Text>
+		</Result>
+		<Result upperBound="13" CP="5">
+			<Name>Major Theft</Name>
+			<Text>You stole expensive items.</Text>
+		</Result>
+		<Result upperBound="14" CP="6">
+			<Name>Corrupted an Innocent</Name>
+			<Text>You counseled an otherwise innocent person who trusted you, toward adverse choices.</Text>
+		</Result>
+		<Result upperBound="15" CP="6">
+			<Name>Blackmailed</Name>
+			<Text>	You used sensitive knowledge or threats to force someone’s cooperation.</Text>
+		</Result>
+		<Result upperBound="16" CP="6">
+			<Name>Destruction</Name>
+			<Text>You destroyed someone else’s property.</Text>
+		</Result>
+		<Result upperBound="17" CP="6">
+			<Name>Armed Robbery</Name>
+			<Text>You robbed someone with the threat of violence.</Text>
+		</Result>
+		<Result upperBound="18" CP="7">
+			<Name>Violent Crime</Name>
+			<Text>You beat, assaulted, or mutilated someone.</Text>
+		</Result>
+		<Result upperBound="19" CP="8">
+			<Name>Murder</Name>
+			<Text>You killed someone.</Text>
+		</Result>
+		<Result upperBound="20" CP="12">
+			<Name>Mass Murder</Name>
+			<Text>You killed several sentient beings.</Text>
+		</Result>
+	</Conflicts>
+	<Conflicts_non_evil dieType="12">
+		<Result upperBound="1" CP="1">
+			<Name>Minor Failure</Name>
+			<Text>You failed a friend, family member, or loved one who depended on you to fulfill an important task.</Text>
+		</Result>
+		<Result upperBound="2" CP="1">
+			<Name>Petty Crime</Name>
+			<Text>You committed a minor crime, like vandalism, trespassing, or mischief.</Text>
+		</Result>
+		<Result upperBound="3" CP="1">
+			<Name>Told a Lie</Name>
+			<Text>You deliberately made someone believe something that was not true to further your own goals.</Text>
+		</Result>
+		<Result upperBound="4" CP="1">
+			<Name>Broke a Promise</Name>
+			<Text>You swore an oath or vow that was important to someone else, but you did not keep your promise.</Text>
+		</Result>
+		<Result upperBound="5" CP="2">
+			<Name>Humiliation</Name>
+			<Text>You publicly humiliated or scandalized someone with either true or slanderous information.</Text>
+		</Result>
+		<Result upperBound="6" CP="2">
+			<Name>Negligence</Name>
+			<Text>You caused someone else to suffer by your own inaction, disregard, or excessive recklessness.</Text>
+		</Result>
+		<Result upperBound="7" CP="2">
+			<Name>Minor Theft</Name>
+			<Text>You stole several small or inexpensive items that belonged to someone else.</Text>
+		</Result>
+		<Result upperBound="8" CP="3">
+			<Name>Seducer</Name>
+			<Text>You tempted or manipulated someone to act in accordance with your whim, careless of whether it was in their own best interests.</Text>
+		</Result>
+		<Result upperBound="9" CP="3">
+			<Name>Cheater</Name>
+			<Text>You broke a rule, law, contract, or agreement for your own gain.</Text>
+		</Result>
+		<Result upperBound="10" CP="4">
+			<Name>Betrayal</Name>
+			<Text>	You betrayed someone who trusted you.</Text>
+		</Result>
+		<Result upperBound="11" CP="4">
+			<Name>Malign Associates</Name>
+			<Text>You allied with a destructive creature, organization, or individual.</Text>
+		</Result>
+		<Result upperBound="12" CP="5">
+			<Name>Destroyed a Reputation</Name>
+			<Text>You deliberately ruined the honor, reputation, or fortunes of another individual or group.</Text>
+		</Result>
+		<Result upperBound="13" CP="5">
+			<Name>Major Theft</Name>
+			<Text>You stole expensive items.</Text>
+		</Result>
+		<Result upperBound="14" CP="6">
+			<Name>Corrupted an Innocent</Name>
+			<Text>You counseled an otherwise innocent person who trusted you, toward adverse choices.</Text>
+		</Result>
+		<Result upperBound="15" CP="6">
+			<Name>Blackmailed</Name>
+			<Text>	You used sensitive knowledge or threats to force someone’s cooperation.</Text>
+		</Result>
+		<Result upperBound="16" CP="6">
+			<Name>Destruction</Name>
+			<Text>You destroyed someone else’s property.</Text>
+		</Result>
+		<Result upperBound="17" CP="6">
+			<Name>Armed Robbery</Name>
+			<Text>You robbed someone with the threat of violence.</Text>
+		</Result>
+		<Result upperBound="18" CP="7">
+			<Name>Violent Crime</Name>
+			<Text>You beat, assaulted, or mutilated someone.</Text>
+		</Result>
+		<Result upperBound="19" CP="8">
+			<Name>Murder</Name>
+			<Text>You killed someone.</Text>
+		</Result>
+		<Result upperBound="20" CP="12">
+			<Name>Mass Murder</Name>
+			<Text>You killed several sentient beings.</Text>
+		</Result>
+	</Conflicts_non_evil>
+	<Conflicts_required_good dieType="6">
+		<Result upperBound="1" CP="1">
+			<Name>Minor Failure</Name>
+			<Text>You failed a friend, family member, or loved one who depended on you to fulfill an important task.</Text>
+		</Result>
+		<Result upperBound="2" CP="1">
+			<Name>Petty Crime</Name>
+			<Text>You committed a minor crime, like vandalism, trespassing, or mischief.</Text>
+		</Result>
+		<Result upperBound="3" CP="1">
+			<Name>Told a Lie</Name>
+			<Text>You deliberately made someone believe something that was not true to further your own goals.</Text>
+		</Result>
+		<Result upperBound="4" CP="1">
+			<Name>Broke a Promise</Name>
+			<Text>You swore an oath or vow that was important to someone else, but you did not keep your promise.</Text>
+		</Result>
+		<Result upperBound="5" CP="2">
+			<Name>Humiliation</Name>
+			<Text>You publicly humiliated or scandalized someone with either true or slanderous information.</Text>
+		</Result>
+		<Result upperBound="6" CP="2">
+			<Name>Negligence</Name>
+			<Text>You caused someone else to suffer by your own inaction, disregard, or excessive recklessness.</Text>
+		</Result>
+		<Result upperBound="7" CP="2">
+			<Name>Minor Theft</Name>
+			<Text>You stole several small or inexpensive items that belonged to someone else.</Text>
+		</Result>
+		<Result upperBound="8" CP="3">
+			<Name>Seducer</Name>
+			<Text>You tempted or manipulated someone to act in accordance with your whim, careless of whether it was in their own best interests.</Text>
+		</Result>
+		<Result upperBound="9" CP="3">
+			<Name>Cheater</Name>
+			<Text>You broke a rule, law, contract, or agreement for your own gain.</Text>
+		</Result>
+		<Result upperBound="10" CP="4">
+			<Name>Betrayal</Name>
+			<Text>	You betrayed someone who trusted you.</Text>
+		</Result>
+		<Result upperBound="11" CP="4">
+			<Name>Malign Associates</Name>
+			<Text>You allied with a destructive creature, organization, or individual.</Text>
+		</Result>
+		<Result upperBound="12" CP="5">
+			<Name>Destroyed a Reputation</Name>
+			<Text>You deliberately ruined the honor, reputation, or fortunes of another individual or group.</Text>
+		</Result>
+		<Result upperBound="13" CP="5">
+			<Name>Major Theft</Name>
+			<Text>You stole expensive items.</Text>
+		</Result>
+		<Result upperBound="14" CP="6">
+			<Name>Corrupted an Innocent</Name>
+			<Text>You counseled an otherwise innocent person who trusted you, toward adverse choices.</Text>
+		</Result>
+		<Result upperBound="15" CP="6">
+			<Name>Blackmailed</Name>
+			<Text>	You used sensitive knowledge or threats to force someone’s cooperation.</Text>
+		</Result>
+		<Result upperBound="16" CP="6">
+			<Name>Destruction</Name>
+			<Text>You destroyed someone else’s property.</Text>
+		</Result>
+		<Result upperBound="17" CP="6">
+			<Name>Armed Robbery</Name>
+			<Text>You robbed someone with the threat of violence.</Text>
+		</Result>
+		<Result upperBound="18" CP="7">
+			<Name>Violent Crime</Name>
+			<Text>You beat, assaulted, or mutilated someone.</Text>
+		</Result>
+		<Result upperBound="19" CP="8">
+			<Name>Murder</Name>
+			<Text>You killed someone.</Text>
+		</Result>
+		<Result upperBound="20" CP="12">
+			<Name>Mass Murder</Name>
+			<Text>You killed several sentient beings.</Text>
+		</Result>
+	</Conflicts_required_good>
+
+	<Conflict_Subject dieType="20">
+		<Result upperBound="1">
+			<Name>Commoner</Name>
+		</Result>
+		<Result upperBound="2">
+			<Name>Merchant</Name>
+		</Result>
+		<Result upperBound="3">
+			<Name>Tradesperson</Name>
+		</Result>
+		<Result upperBound="4">
+			<Name>Artisan</Name>
+		</Result>
+		<Result upperBound="5">
+			<Name>Civic or military official</Name>
+		</Result>
+		<Result upperBound="6">
+			<Name>Noble</Name>
+		</Result>
+		<Result upperBound="7">
+			<Name>Leader</Name>
+		</Result>
+		<Result upperBound="8">
+			<Name>Clergy</Name>
+		</Result>
+		<Result upperBound="9">
+			<Name>Soldier or warrior</Name>
+		</Result>
+		<Result upperBound="10">
+			<Name>Spellcaster</Name>
+		</Result>
+		<Result upperBound="11">
+			<Name>Scoundrel</Name>
+		</Result>
+		<Result upperBound="12" CP="1">
+			<Name>Child or young person</Name>
+		</Result>
+		<Result upperBound="13">
+			<Name>Family member</Name>
+		</Result>
+		<Result upperBound="14">
+			<Name>Close friend</Name>
+		</Result>
+		<Result upperBound="15">
+			<Name>Lover or former lover</Name>
+			<Trait type="Special">d12_romantic</Trait>
+		</Result>
+		<Result upperBound="16">
+			<Name>Enemy or rival</Name>
+		</Result>
+		<Result upperBound="17">
+			<Name>Gangster or underworld figure</Name>
+		</Result>
+		<Result upperBound="18">
+			<Name>Adventurer</Name>
+		</Result>
+		<Result upperBound="19">
+			<Name>Humanoid monster</Name>
+		</Result>
+		<Result upperBound="20">
+			<Name>Non-humanoid monster</Name>
+		</Result>
+	</Conflict_Subject>
+
+	<Conflict_Motivation dieType="10">
+		<Result upperBound="1" CP="1">
+			<Name>Justice</Name>
+		</Result>
+		<Result upperBound="2" CP="1">
+			<Name>Love</Name>
+		</Result>
+		<Result upperBound="3" CP="2">
+			<Name>Pressured or Manipulated</Name>
+		</Result>
+		<Result upperBound="4" CP="2">
+			<Name>Religion</Name>
+		</Result>
+		<Result upperBound="5" CP="3">
+			<Name>Family</Name>
+		</Result>
+		<Result upperBound="6" CP="3">
+			<Name>Money</Name>
+		</Result>
+		<Result upperBound="7" CP="4">
+			<Name>Jealousy</Name>
+		</Result>
+		<Result upperBound="8" CP="4">
+			<Name>Hatred or Malice</Name>
+		</Result>
+		<Result upperBound="9" CP="5">
+			<Name>Pleasure</Name>
+		</Result>
+		<Result upperBound="10" CP="5">
+			<Name>Amusement or Entertainment</Name>
+		</Result>
+
+	</Conflict_Motivation>
+
 </MiscTables>
 </Background>

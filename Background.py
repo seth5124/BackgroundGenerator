@@ -5,8 +5,6 @@ import discord
 from dotenv import load_dotenv
 # TODO: convert to more efficient string concatenation solution
 # TODO: ensure trait list doesn't include duplicates
-# TODO: Finish Class tables
-# TODO: Write Influential Associates Table
 # TODO: Conflict system
 # TODO: Romantic Relationships
 # TODO: Relationships with fellow adventurers
@@ -26,8 +24,8 @@ list_of_half_races = {"Half-Elf", "Half-Orc"}
 list_of_races = {"Dwarf", "Elf", "Gnome", "Human", "Halfling"}
 list_of_classes = {"Alchemist", "Barbarian", "Bard", "Cavalier",
                    "Cleric", "Druid", "Fighter", "Gunslinger", "Inquisitor",
-                   "Magus", "Monk", "Oracle", "Paladin","Ranger","Rogue","Sorcerer",
-                   "Summoner","Witch","Wizard"}
+                   "Magus", "Monk", "Oracle", "Paladin", "Ranger", "Rogue", "Sorcerer",
+                   "Summoner", "Witch", "Wizard"}
 
 traits = dict()
 
@@ -125,6 +123,11 @@ def roll_punishment():
     return data.get_return_string()
 
 
+def roll_influential_associates():
+    data = table_roll(root.find('MiscTables/Influential_Associates'))
+    return data.get_return_string() + "\n" + data.get_text()
+
+
 def print_traits():
     return_string = "You gain access to the following traits: \n"
     for trait in traits:
@@ -193,6 +196,11 @@ def roll_siblings(race=test_race):
 
     return return_string
 
+def roll_conflict():
+    CP=0
+    conflict = table_roll(root.find('MiscTables/Conflicts'))
+    CP+=conflict.get
+
 
 def roll_background(race, chosen_class): # Function returns the entire background in one large string so it can be easily sent
     global number_of_siblings
@@ -201,24 +209,26 @@ def roll_background(race, chosen_class): # Function returns the entire backgroun
     number_of_siblings = 0
     return_string += "Race: " + race + "\n" \
            + "Homeland: " + "\n" \
-           + roll_homeland(race) + "\n" \
+           + roll_homeland(race) + "\n \n" \
            + "Parents: " + "\n" \
-           + roll_parents(race) + "\n" \
+           + roll_parents(race) + "\n \n" \
            + "Siblings: " + "\n" \
-           + roll_siblings(race) + "\n" \
+           + roll_siblings(race) + "\n \n" \
            + "Circumstance of Birth: " + "\n" \
-           + roll_circumstance_of_birth() + "\n" \
+           + roll_circumstance_of_birth() + "\n \n" \
            + "Parent's Profession: " + "\n" \
-           + roll_parents_profession() + "\n" \
+           + roll_parents_profession() + "\n \n" \
            + "Major Childhood Event: " + "\n"\
-           + roll_major_childhood_event() + "\n"
+           + roll_major_childhood_event() + "\n \n"
     return_string += "Class: " + chosen_class + "\n"\
         + roll_class_background(chosen_class) + "\n \n"
     if "Criminal" in traits:
         return_string += "Crime: " + "\n" + roll_crime() + "\n" \
             "Punishment: " + "\n"\
             + roll_punishment() + "\n"
-    return_string += print_traits()
+    return_string += "Your Influential Associate: \n" +  \
+        roll_influential_associates() + "\n \n" \
+        + print_traits()
 
     return return_string
 
@@ -228,6 +238,7 @@ class Result:
     def __init__(self):
         self.return_string = ""
         self.num_siblings = 0
+        self.cp = 0
         self.traits = dict()
         self.text = ""
 
@@ -260,8 +271,8 @@ class Result:
         self.text = result.text
 
 
-
 client = discord.Client()
+
 
 @client.event
 async def on_ready():
@@ -269,6 +280,8 @@ async def on_ready():
     print(client.guilds)
     channel = discord.utils.get(client.get_all_channels(), name="general")
     await channel.send("Hello world! " + client.user.mention + " is here!")
+
+
 @client.event
 async def on_message(message):
     user = message.author
@@ -300,11 +313,9 @@ async def on_message(message):
         await message.channel.send(user.mention + "'s Background\n" + roll_background(chosen_race, chosen_class))
 
 
-
-
-
 def run_bot():
 
     client.run(TOKEN)
 
 
+run_bot()

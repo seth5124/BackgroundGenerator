@@ -6,8 +6,6 @@ from dotenv import load_dotenv
 # TODO: convert to more efficient string concatenation solution
 # TODO: ensure trait list doesn't include duplicates
 # TODO: Convert traits to custom data type
-# TODO: Conflict system
-# TODO: Romantic Relationships
 # TODO: Relationships with fellow adventurers
 
 
@@ -366,4 +364,4 @@ def run_bot():
 
     client.run(TOKEN)
 
-
+run_bot()

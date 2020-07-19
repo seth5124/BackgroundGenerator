@@ -5,6 +5,7 @@ import discord
 from dotenv import load_dotenv
 # TODO: convert to more efficient string concatenation solution
 # TODO: ensure trait list doesn't include duplicates
+# TODO: Convert traits to custom data type
 # TODO: Conflict system
 # TODO: Romantic Relationships
 # TODO: Relationships with fellow adventurers
@@ -40,6 +41,7 @@ def table_roll(table):
     die_type = table.attrib['dieType']  # Pulls die type from table
     modifier = 0  # stores die roll modifier e.g 1d4 +1
     multiplier = 1  # Handles multiple dice e.g 2d4
+    CP = 0
     global number_of_siblings
 
     if 'modifier' in table.attrib:
@@ -81,6 +83,10 @@ def table_roll(table):
                         # to the table
 
                     outcome.extra_roll(table_roll(table_source))
+
+            if 'CP' in result.attrib:
+                outcome.add_cp(int(result.attrib['CP']))
+
 
             number_of_siblings += outcome.get_num_siblings()  # Takes any addition to sibling count and adds it to
             # the overall total
@@ -197,12 +203,37 @@ def roll_siblings(race=test_race):
     return return_string
 
 def roll_conflict():
-    CP=0
+    total_CP = 0
     conflict = table_roll(root.find('MiscTables/Conflicts'))
-    CP+=conflict.get
+    total_CP += conflict.get_cp()
+    subject = table_roll(root.find('MiscTables/Conflict_Subject'))
+    total_CP += subject.get_cp()
+    motivation = table_roll(root.find('MiscTables/Conflict_Motivation'))
+    total_CP += motivation.get_cp()
+
+    return_string = conflict.get_return_string() + "  (CP: " + str(conflict.get_cp()) + ")\n"\
+        + "Subject: \n" \
+        + subject.get_return_string() + "  (CP:" + str(subject.get_cp()) + ")\n"\
+        + "Motivation: \n" \
+        + motivation.get_return_string() + " (CP:" + str(motivation.get_cp()) + ")\n" \
+        + "Total Conflict Points: " + str(total_CP)
+    return return_string
 
 
-def roll_background(race, chosen_class): # Function returns the entire background in one large string so it can be easily sent
+def roll_romantic_relationships():
+    if 'd12_Romantic' in traits:
+        data = table_roll(root.find('MiscTables/d12_Romantic_Relationships'))
+    else:
+        data = table_roll(root.find('MiscTables/Romantic_Relationships'))
+    return data.get_return_string() + "\n" + data.get_text()
+
+
+def roll_drawback():
+    data = table_roll(root.find('MiscTables/Character_Drawback'))
+    return data.get_return_string() + "\n" + data.get_text()
+
+
+def roll_background(race): # Function returns the entire background in one large string so it can be easily sent
     global number_of_siblings
     return_string = ""
     traits.clear()
@@ -217,21 +248,32 @@ def roll_background(race, chosen_class): # Function returns the entire backgroun
            + "Circumstance of Birth: " + "\n" \
            + roll_circumstance_of_birth() + "\n \n" \
            + "Parent's Profession: " + "\n" \
-           + roll_parents_profession() + "\n \n" \
-           + "Major Childhood Event: " + "\n"\
-           + roll_major_childhood_event() + "\n \n"
-    return_string += "Class: " + chosen_class + "\n"\
-        + roll_class_background(chosen_class) + "\n \n"
-    if "Criminal" in traits:
-        return_string += "Crime: " + "\n" + roll_crime() + "\n" \
-            "Punishment: " + "\n"\
-            + roll_punishment() + "\n"
-    return_string += "Your Influential Associate: \n" +  \
-        roll_influential_associates() + "\n \n" \
-        + print_traits()
+           + roll_parents_profession() + "\n." \
 
     return return_string
 
+
+
+def roll_background_2(chosen_class):
+    return_string = ""
+    "Major Childhood Event: " + "\n" \
+    + roll_major_childhood_event() + "\n \n"
+    return_string += "Class: " + chosen_class + "\n" \
+                     + roll_class_background(chosen_class) + "\n \n"
+    if "Criminal" in traits:
+        return_string += "Crime: " + "\n" + roll_crime() + "\n" \
+                                                           "Punishment: " + "\n" \
+                         + roll_punishment() + "\n"
+    return_string += "Your Influential Associate: \n" + \
+                     roll_influential_associates() + "\n \n" \
+                     + "Conflict: " + "\n" \
+                     + roll_conflict() + "\n \n" \
+                     + "Romantic Relationships: \n" \
+                     + roll_romantic_relationships() + "\n \n" \
+                     + "Character Drawback:  \n" \
+                     + roll_drawback() + "\n \n" \
+                     + print_traits()
+    return return_string
 
 class Result:
 
@@ -241,6 +283,12 @@ class Result:
         self.cp = 0
         self.traits = dict()
         self.text = ""
+
+    def add_cp(self, CP):
+        self.cp += CP
+
+    def get_cp(self):
+        return self.cp
 
     def set_text(self, text):
         self.text = text
@@ -276,10 +324,10 @@ client = discord.Client()
 
 @client.event
 async def on_ready():
-    print(f'{client.user.display_name} has connected')
-    print(client.guilds)
-    channel = discord.utils.get(client.get_all_channels(), name="general")
-    await channel.send("Hello world! " + client.user.mention + " is here!")
+    print(f'{client.user.display_name} has connected to ' + str(client.guilds))
+
+    channel = discord.utils.get(client.get_all_channels(), name="roll-dice")
+    await channel.send("Hello! " + client.user.mention + " is now taking requests!")
 
 
 @client.event
@@ -310,7 +358,8 @@ async def on_message(message):
         if not race_found or not class_found:
             await message.channel.send(user.mention + ", You are missing information. You need include a race and a class.")
             return
-        await message.channel.send(user.mention + "'s Background\n" + roll_background(chosen_race, chosen_class))
+        await message.channel.send(user.mention + "'s Background\n" + roll_background(chosen_race))
+        await message.channel.send("\n \n" + roll_background_2(chosen_class))
 
 
 def run_bot():
@@ -318,4 +367,3 @@ def run_bot():
     client.run(TOKEN)
 
 
-run_bot()

@@ -252,7 +252,7 @@ def roll_background(race): # Function returns the entire background in one large
 
 
 
-def roll_background_2(chosen_class):
+def roll_background_2(chosen_class): # Had to split the background function into two because the string was getting too large to send in one message
     return_string = ""
     "Major Childhood Event: " + "\n" \
     + roll_major_childhood_event() + "\n \n"

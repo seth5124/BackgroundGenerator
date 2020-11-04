@@ -7,6 +7,8 @@ from dotenv import load_dotenv
 # TODO: ensure trait list doesn't include duplicates
 # TODO: Convert traits to custom data type
 # TODO: Relationships with fellow adventurers
+# TODO: Unusual homeland table doesn't add traits
+# TODO: Roll function doesn't generate individual die rolls if a multiplier exists
 
 
 load_dotenv()
